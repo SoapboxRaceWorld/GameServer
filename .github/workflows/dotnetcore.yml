@@ -1,0 +1,22 @@
+name: .NET Core
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100-preview1-014459
+      continue-on-error: false
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+      continue-on-error: false
+    - name: Publish with dotnet
+      run: dotnet publish --configuration Release --no-build
+      continue-on-error: false
