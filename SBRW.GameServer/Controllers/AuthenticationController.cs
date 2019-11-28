@@ -43,5 +43,16 @@ namespace SBRW.GameServer.Controllers
 
             return new OkObjectResult("Account created");
         }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> LogIn([FromBody] LoginModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            return Ok("you thought");
+        }
     }
 }
