@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VictoryCodeGen": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\Need for Speed World (LAUNCHER INSTALL)\\gameplay.dll\""
+    }
+  }
+}
