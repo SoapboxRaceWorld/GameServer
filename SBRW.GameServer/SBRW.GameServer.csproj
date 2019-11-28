@@ -17,7 +17,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
-    <PackageReference Include="ScottBrady91.AspNetCore.Identity.BCryptPasswordHasher" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>

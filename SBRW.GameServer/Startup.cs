@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SBRW.Data;
 using SBRW.Data.Entities;
+using SBRW.GameServer.Auth;
 
 namespace SBRW.GameServer
 {
@@ -47,6 +48,15 @@ namespace SBRW.GameServer
             builder = new IdentityBuilder(builder.UserType, typeof(IdentityRole), builder.Services);
             builder.AddEntityFrameworkStores<GameDbContext>().AddDefaultTokenProviders();
 
+            // authorization
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("SoapServicePlayer",
+                    policyBuilder =>
+                    {
+                        policyBuilder.RequireClaim(AuthClaimIdentifiers.Role, AuthClaims.PlayerAccess);
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
