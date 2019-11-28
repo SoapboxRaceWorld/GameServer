@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class CommerceItemTrans
 	{
 		[DataMember]
-		public System.Int32 Hash {get; set;}
+		public int Hash {get; set;}
 		[DataMember]
-		public System.String Title {get; set;}
+		public string Title {get; set;}
 	}
 }

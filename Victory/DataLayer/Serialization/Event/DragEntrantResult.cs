@@ -5,6 +5,6 @@ namespace Victory.DataLayer.Serialization.Event
 	public class DragEntrantResult
 	{
 		[DataMember]
-		public System.Single TopSpeed {get; set;}
+		public float TopSpeed {get; set;}
 	}
 }

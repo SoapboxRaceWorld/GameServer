@@ -5,14 +5,14 @@ namespace Victory.DataLayer.Serialization
 	public class FraudConfig
 	{
 		[DataMember]
-		public System.Int32 enabledBitField {get; set;}
+		public int enabledBitField {get; set;}
 		[DataMember]
-		public System.Int32 gameFileFreq {get; set;}
+		public int gameFileFreq {get; set;}
 		[DataMember]
-		public System.Int32 moduleFreq {get; set;}
+		public int moduleFreq {get; set;}
 		[DataMember]
-		public System.Int32 startUpFreq {get; set;}
+		public int startUpFreq {get; set;}
 		[DataMember]
-		public System.Int64 userID {get; set;}
+		public long userID {get; set;}
 	}
 }

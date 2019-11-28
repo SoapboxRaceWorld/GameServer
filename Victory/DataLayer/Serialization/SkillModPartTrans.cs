@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class SkillModPartTrans
 	{
 		[DataMember]
-		public System.Boolean IsFixed {get; set;}
+		public bool IsFixed {get; set;}
 		[DataMember]
-		public System.Int32 SkillModPartAttribHash {get; set;}
+		public int SkillModPartAttribHash {get; set;}
 	}
 }

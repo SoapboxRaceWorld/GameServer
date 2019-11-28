@@ -5,8 +5,8 @@ namespace Victory.Service
 	public class LobbyEntrantRemoved
 	{
 		[DataMember]
-		public System.Int64 LobbyId {get; set;}
+		public long LobbyId {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 	}
 }

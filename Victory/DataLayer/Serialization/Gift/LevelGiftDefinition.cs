@@ -5,10 +5,10 @@ namespace Victory.DataLayer.Serialization.Gift
 	public class LevelGiftDefinition
 	{
 		[DataMember]
-		public System.Int32 Boost {get; set;}
+		public int Boost {get; set;}
 		[DataMember]
-		public System.Int32 Level {get; set;}
+		public int Level {get; set;}
 		[DataMember]
-		public System.Int32 LevelGiftId {get; set;}
+		public int LevelGiftId {get; set;}
 	}
 }

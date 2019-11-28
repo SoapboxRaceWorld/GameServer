@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class ClientConfig
 	{
 		[DataMember]
-		public System.String group {get; set;}
+		public string group {get; set;}
 		[DataMember]
-		public System.Int64 level {get; set;}
+		public long level {get; set;}
 	}
 }

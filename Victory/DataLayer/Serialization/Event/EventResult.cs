@@ -7,18 +7,18 @@ namespace Victory.DataLayer.Serialization.Event
 		[DataMember]
 		public Victory.DataLayer.Serialization.Event.Accolades Accolades {get; set;}
 		[DataMember]
-		public System.Int32 Durability {get; set;}
+		public int Durability {get; set;}
 		[DataMember]
-		public System.Int32 EventId {get; set;}
+		public int EventId {get; set;}
 		[DataMember]
-		public System.Int64 EventSessionId {get; set;}
+		public long EventSessionId {get; set;}
 		[DataMember]
 		public Victory.DataLayer.Serialization.Event.ExitPath ExitPath {get; set;}
 		[DataMember]
-		public System.Int32 InviteLifetimeInMilliseconds {get; set;}
+		public int InviteLifetimeInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int64 LobbyInviteId {get; set;}
+		public long LobbyInviteId {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 	}
 }

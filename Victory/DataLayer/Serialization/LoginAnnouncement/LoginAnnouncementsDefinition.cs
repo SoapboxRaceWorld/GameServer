@@ -7,6 +7,6 @@ namespace Victory.DataLayer.Serialization.LoginAnnouncement
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.LoginAnnouncement.LoginAnnouncementDefinition> Announcements {get; set;}
 		[DataMember]
-		public System.String ImagesPath {get; set;}
+		public string ImagesPath {get; set;}
 	}
 }

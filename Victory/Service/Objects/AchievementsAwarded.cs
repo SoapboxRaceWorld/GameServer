@@ -9,10 +9,10 @@ namespace Victory.Service.Objects
 		[DataMember]
 		public System.Collections.Generic.List<Victory.Service.Objects.BadgePacket> Badges {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.Service.Objects.AchievementProgress> Progressed {get; set;}
 		[DataMember]
-		public System.Int32 Score {get; set;}
+		public int Score {get; set;}
 	}
 }

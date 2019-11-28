@@ -5,18 +5,18 @@ namespace Victory.DataLayer.Serialization
 	public class RegionInfo
 	{
 		[DataMember]
-		public System.Int32 CountdownProposalInMilliseconds {get; set;}
+		public int CountdownProposalInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int32 DirectConnectTimeoutInMilliseconds {get; set;}
+		public int DirectConnectTimeoutInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int32 DropOutTimeInMilliseconds {get; set;}
+		public int DropOutTimeInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int32 EventLoadTimeoutInMilliseconds {get; set;}
+		public int EventLoadTimeoutInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int32 HeartbeatIntervalInMilliseconds {get; set;}
+		public int HeartbeatIntervalInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int32 UdpRelayBandwidthInBps {get; set;}
+		public int UdpRelayBandwidthInBps {get; set;}
 		[DataMember]
-		public System.Int32 UdpRelayTimeoutInMilliseconds {get; set;}
+		public int UdpRelayTimeoutInMilliseconds {get; set;}
 	}
 }

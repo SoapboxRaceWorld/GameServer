@@ -7,14 +7,14 @@ namespace Victory.DataLayer.Serialization
 		[DataMember]
 		public Victory.DataLayer.Serialization.CustomCarTrans CustomCar {get; set;}
 		[DataMember]
-		public System.Int32 Durability {get; set;}
+		public int Durability {get; set;}
 		[DataMember]
 		public System.DateTime ExpirationDate {get; set;}
 		[DataMember]
-		public System.Single Heat {get; set;}
+		public float Heat {get; set;}
 		[DataMember]
-		public System.Int64 Id {get; set;}
+		public long Id {get; set;}
 		[DataMember]
-		public System.String OwnershipType {get; set;}
+		public string OwnershipType {get; set;}
 	}
 }

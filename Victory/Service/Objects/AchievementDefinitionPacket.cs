@@ -5,19 +5,19 @@ namespace Victory.Service.Objects
 	public class AchievementDefinitionPacket
 	{
 		[DataMember]
-		public System.Int32 AchievementDefinitionId {get; set;}
+		public int AchievementDefinitionId {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.Service.Objects.AchievementRankPacket> AchievementRanks {get; set;}
 		[DataMember]
-		public System.Int32 BadgeDefinitionId {get; set;}
+		public int BadgeDefinitionId {get; set;}
 		[DataMember]
-		public System.Boolean CanProgress {get; set;}
+		public bool CanProgress {get; set;}
 		[DataMember]
-		public System.Int64 CurrentValue {get; set;}
+		public long CurrentValue {get; set;}
 		[DataMember]
-		public System.Boolean IsVisible {get; set;}
+		public bool IsVisible {get; set;}
 		[DataMember]
-		public System.String ProgressText {get; set;}
+		public string ProgressText {get; set;}
 		[DataMember]
 		public Victory.Service.Objects.StatConversion StatConversion {get; set;}
 	}

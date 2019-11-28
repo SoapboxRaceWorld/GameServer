@@ -5,10 +5,10 @@ namespace Victory.Service.Objects.Event
 	public class CarClass
 	{
 		[DataMember]
-		public System.Int32 CarClassHash {get; set;}
+		public int CarClassHash {get; set;}
 		[DataMember]
-		public System.Int16 MaxRating {get; set;}
+		public short MaxRating {get; set;}
 		[DataMember]
-		public System.Int16 MinRating {get; set;}
+		public short MinRating {get; set;}
 	}
 }

@@ -5,18 +5,18 @@ namespace Victory.DataLayer.Serialization
 	public class UserSettings
 	{
 		[DataMember]
-		public System.UInt32 desktopResHeight {get; set;}
+		public uint desktopResHeight {get; set;}
 		[DataMember]
-		public System.UInt32 desktopResWidth {get; set;}
+		public uint desktopResWidth {get; set;}
 		[DataMember]
-		public System.Boolean fullscreen {get; set;}
+		public bool fullscreen {get; set;}
 		[DataMember]
-		public System.UInt32 gameResHeight {get; set;}
+		public uint gameResHeight {get; set;}
 		[DataMember]
-		public System.UInt32 gameResWidth {get; set;}
+		public uint gameResWidth {get; set;}
 		[DataMember]
-		public System.UInt32 globalDetailLevel {get; set;}
+		public uint globalDetailLevel {get; set;}
 		[DataMember]
-		public System.Int64 userID {get; set;}
+		public long userID {get; set;}
 	}
 }

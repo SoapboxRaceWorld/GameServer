@@ -5,8 +5,8 @@ namespace Victory.Service
 	public class P2PCryptoTicket
 	{
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 		[DataMember]
-		public System.String SessionKey {get; set;}
+		public string SessionKey {get; set;}
 	}
 }

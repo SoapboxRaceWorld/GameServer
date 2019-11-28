@@ -5,62 +5,62 @@ namespace Victory.DataLayer.Serialization
 	public class HardwareInfo
 	{
 		[DataMember]
-		public System.UInt32 availableMem {get; set;}
+		public uint availableMem {get; set;}
 		[DataMember]
-		public System.String cpuBrand {get; set;}
+		public string cpuBrand {get; set;}
 		[DataMember]
-		public System.String cpuid0 {get; set;}
+		public string cpuid0 {get; set;}
 		[DataMember]
-		public System.UInt32 cpuid1_0 {get; set;}
+		public uint cpuid1_0 {get; set;}
 		[DataMember]
-		public System.UInt32 cpuid1_1 {get; set;}
+		public uint cpuid1_1 {get; set;}
 		[DataMember]
-		public System.UInt32 cpuid1_2 {get; set;}
+		public uint cpuid1_2 {get; set;}
 		[DataMember]
-		public System.UInt32 cpuid1_3 {get; set;}
+		public uint cpuid1_3 {get; set;}
 		[DataMember]
-		public System.UInt32 deviceID {get; set;}
+		public uint deviceID {get; set;}
 		[DataMember]
-		public System.UInt32 excpuid1_0 {get; set;}
+		public uint excpuid1_0 {get; set;}
 		[DataMember]
-		public System.UInt32 excpuid1_1 {get; set;}
+		public uint excpuid1_1 {get; set;}
 		[DataMember]
-		public System.UInt32 excpuid1_2 {get; set;}
+		public uint excpuid1_2 {get; set;}
 		[DataMember]
-		public System.UInt32 excpuid1_3 {get; set;}
+		public uint excpuid1_3 {get; set;}
 		[DataMember]
-		public System.String gpuDescription {get; set;}
+		public string gpuDescription {get; set;}
 		[DataMember]
-		public System.UInt32 gpuDriverBuild {get; set;}
+		public uint gpuDriverBuild {get; set;}
 		[DataMember]
-		public System.UInt32 gpuDriverSubversion {get; set;}
+		public uint gpuDriverSubversion {get; set;}
 		[DataMember]
-		public System.UInt32 gpuDriverVersion {get; set;}
+		public uint gpuDriverVersion {get; set;}
 		[DataMember]
-		public System.UInt32 gpuMemory {get; set;}
+		public uint gpuMemory {get; set;}
 		[DataMember]
-		public System.UInt32 gpuProduct {get; set;}
+		public uint gpuProduct {get; set;}
 		[DataMember]
-		public System.UInt32 osBuildNumber {get; set;}
+		public uint osBuildNumber {get; set;}
 		[DataMember]
-		public System.UInt32 osMajorVersion {get; set;}
+		public uint osMajorVersion {get; set;}
 		[DataMember]
-		public System.UInt32 osMinorVersion {get; set;}
+		public uint osMinorVersion {get; set;}
 		[DataMember]
-		public System.UInt32 physicalCores {get; set;}
+		public uint physicalCores {get; set;}
 		[DataMember]
-		public System.UInt32 platformID {get; set;}
+		public uint platformID {get; set;}
 		[DataMember]
-		public System.UInt32 processAffinityMask {get; set;}
+		public uint processAffinityMask {get; set;}
 		[DataMember]
-		public System.String servicePack {get; set;}
+		public string servicePack {get; set;}
 		[DataMember]
-		public System.UInt32 systemAffinityMask {get; set;}
+		public uint systemAffinityMask {get; set;}
 		[DataMember]
-		public System.UInt32 totalMemory {get; set;}
+		public uint totalMemory {get; set;}
 		[DataMember]
-		public System.Int64 userID {get; set;}
+		public long userID {get; set;}
 		[DataMember]
-		public System.UInt32 vendorID {get; set;}
+		public uint vendorID {get; set;}
 	}
 }

@@ -5,10 +5,10 @@ namespace Victory.DataLayer.Serialization
 	public class Vector3
 	{
 		[DataMember]
-		public System.Single X {get; set;}
+		public float X {get; set;}
 		[DataMember]
-		public System.Single Y {get; set;}
+		public float Y {get; set;}
 		[DataMember]
-		public System.Single Z {get; set;}
+		public float Z {get; set;}
 	}
 }

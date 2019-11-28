@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization.Social
 	public class UserPersonaMap
 	{
 		[DataMember]
-		public System.Int64 personaId {get; set;}
+		public long personaId {get; set;}
 		[DataMember]
-		public System.Int64 userId {get; set;}
+		public long userId {get; set;}
 	}
 }

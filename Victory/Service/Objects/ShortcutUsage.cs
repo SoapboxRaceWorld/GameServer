@@ -5,8 +5,8 @@ namespace Victory.Service.Objects
 	public class ShortcutUsage
 	{
 		[DataMember]
-		public System.String shortCut {get; set;}
+		public string shortCut {get; set;}
 		[DataMember]
-		public System.Int32 timesUsed {get; set;}
+		public int timesUsed {get; set;}
 	}
 }

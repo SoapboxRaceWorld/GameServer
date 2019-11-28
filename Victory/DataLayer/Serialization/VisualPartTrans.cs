@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class VisualPartTrans
 	{
 		[DataMember]
-		public System.Int32 PartHash {get; set;}
+		public int PartHash {get; set;}
 		[DataMember]
-		public System.Int32 SlotHash {get; set;}
+		public int SlotHash {get; set;}
 	}
 }

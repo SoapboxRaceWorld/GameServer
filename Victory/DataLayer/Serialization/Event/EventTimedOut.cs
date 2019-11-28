@@ -5,6 +5,6 @@ namespace Victory.DataLayer.Serialization.Event
 	public class EventTimedOut
 	{
 		[DataMember]
-		public System.Int64 EventSessionId {get; set;}
+		public long EventSessionId {get; set;}
 	}
 }

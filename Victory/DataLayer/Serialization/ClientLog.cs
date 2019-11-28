@@ -7,6 +7,6 @@ namespace Victory.DataLayer.Serialization
 		[DataMember]
 		public System.DateTime date {get; set;}
 		[DataMember]
-		public System.String message {get; set;}
+		public string message {get; set;}
 	}
 }

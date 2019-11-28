@@ -5,14 +5,14 @@ namespace Victory.Service
 	public class LobbyInvite
 	{
 		[DataMember]
-		public System.Int32 EventId {get; set;}
+		public int EventId {get; set;}
 		[DataMember]
-		public System.Int32 InviteLifetimeInMilliseconds {get; set;}
+		public int InviteLifetimeInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int64 InvitedByPersonaId {get; set;}
+		public long InvitedByPersonaId {get; set;}
 		[DataMember]
-		public System.Boolean IsPrivate {get; set;}
+		public bool IsPrivate {get; set;}
 		[DataMember]
-		public System.Int64 LobbyInviteId {get; set;}
+		public long LobbyInviteId {get; set;}
 	}
 }

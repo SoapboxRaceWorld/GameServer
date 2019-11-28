@@ -7,10 +7,10 @@ namespace Victory.DataLayer.Serialization
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.OwnedCarTrans> CarsOwnedByPersona {get; set;}
 		[DataMember]
-		public System.Int32 DefaultOwnedCarIndex {get; set;}
+		public int DefaultOwnedCarIndex {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.ProductTrans> ObtainableSlots {get; set;}
 		[DataMember]
-		public System.Int32 OwnedCarSlotsCount {get; set;}
+		public int OwnedCarSlotsCount {get; set;}
 	}
 }

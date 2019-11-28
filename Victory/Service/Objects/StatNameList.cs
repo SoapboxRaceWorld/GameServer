@@ -5,6 +5,6 @@ namespace Victory.Service.Objects
 	public class StatNameList
 	{
 		[DataMember]
-		public System.Collections.Generic.List<System.String> Stats {get; set;}
+		public System.Collections.Generic.List<string> Stats {get; set;}
 	}
 }

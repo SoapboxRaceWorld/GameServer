@@ -5,6 +5,6 @@ namespace Victory.DataLayer.Serialization.Social
 	public class BlockPlayerMsg
 	{
 		[DataMember]
-		public System.Int64 userId {get; set;}
+		public long userId {get; set;}
 	}
 }

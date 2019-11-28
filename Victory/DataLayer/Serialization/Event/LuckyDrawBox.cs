@@ -5,10 +5,10 @@ namespace Victory.DataLayer.Serialization.Event
 	public class LuckyDrawBox
 	{
 		[DataMember]
-		public System.Boolean IsValid {get; set;}
+		public bool IsValid {get; set;}
 		[DataMember]
-		public System.String LocalizationString {get; set;}
+		public string LocalizationString {get; set;}
 		[DataMember]
-		public System.Int32 LuckyDrawSetCategoryId {get; set;}
+		public int LuckyDrawSetCategoryId {get; set;}
 	}
 }

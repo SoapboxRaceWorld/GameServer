@@ -5,6 +5,6 @@ namespace Victory.Service
 	public class region
 	{
 		[DataMember]
-		public System.String name {get; set;}
+		public string name {get; set;}
 	}
 }

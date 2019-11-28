@@ -5,18 +5,18 @@ namespace Victory.DataLayer.Serialization.Social
 	public class SocialSettings
 	{
 		[DataMember]
-		public System.Boolean AppearOffline {get; set;}
+		public bool AppearOffline {get; set;}
 		[DataMember]
-		public System.Int32 DeclineGroupInvite {get; set;}
+		public int DeclineGroupInvite {get; set;}
 		[DataMember]
-		public System.Boolean DeclineIncommingFriendRequests {get; set;}
+		public bool DeclineIncommingFriendRequests {get; set;}
 		[DataMember]
-		public System.Int32 DeclinePrivateInvite {get; set;}
+		public int DeclinePrivateInvite {get; set;}
 		[DataMember]
-		public System.Boolean HideOfflineFriends {get; set;}
+		public bool HideOfflineFriends {get; set;}
 		[DataMember]
-		public System.Boolean ShowNewsOnSignIn {get; set;}
+		public bool ShowNewsOnSignIn {get; set;}
 		[DataMember]
-		public System.Boolean ShowOnlyPlayersInSameChatChannel {get; set;}
+		public bool ShowOnlyPlayersInSameChatChannel {get; set;}
 	}
 }

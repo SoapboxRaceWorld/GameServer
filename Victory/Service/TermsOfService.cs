@@ -5,26 +5,26 @@ namespace Victory.Service
 	public class TermsOfService
 	{
 		[DataMember]
-		public System.String en {get; set;}
+		public string en {get; set;}
 		[DataMember]
-		public System.String de {get; set;}
+		public string de {get; set;}
 		[DataMember]
-		public System.String es {get; set;}
+		public string es {get; set;}
 		[DataMember]
-		public System.String fr {get; set;}
+		public string fr {get; set;}
 		[DataMember]
-		public System.String pl {get; set;}
+		public string pl {get; set;}
 		[DataMember]
-		public System.String pt {get; set;}
+		public string pt {get; set;}
 		[DataMember]
-		public System.String ru {get; set;}
+		public string ru {get; set;}
 		[DataMember]
-		public System.String th {get; set;}
+		public string th {get; set;}
 		[DataMember]
-		public System.String tr {get; set;}
+		public string tr {get; set;}
 		[DataMember]
-		public System.String zh {get; set;}
+		public string zh {get; set;}
 		[DataMember]
-		public System.String zh_chs {get; set;}
+		public string zh_chs {get; set;}
 	}
 }

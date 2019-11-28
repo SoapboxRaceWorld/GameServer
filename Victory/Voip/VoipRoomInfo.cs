@@ -5,6 +5,6 @@ namespace Victory.Voip
 	public class VoipRoomInfo
 	{
 		[DataMember]
-		public System.String Token {get; set;}
+		public string Token {get; set;}
 	}
 }

@@ -5,6 +5,6 @@ namespace Victory.DataLayer.Serialization.Social
 	public class RemoveFriendMsg
 	{
 		[DataMember]
-		public System.Int64 personaId {get; set;}
+		public long personaId {get; set;}
 	}
 }

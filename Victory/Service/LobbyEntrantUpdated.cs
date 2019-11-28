@@ -5,7 +5,7 @@ namespace Victory.Service
 	public class LobbyEntrantUpdated
 	{
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 		[DataMember]
 		public Victory.Service.LobbyEntrantState State {get; set;}
 	}

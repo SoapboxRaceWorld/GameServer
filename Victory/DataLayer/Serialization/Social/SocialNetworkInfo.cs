@@ -5,6 +5,6 @@ namespace Victory.DataLayer.Serialization.Social
 	public class SocialNetworkInfo
 	{
 		[DataMember]
-		public System.String facebookName {get; set;}
+		public string facebookName {get; set;}
 	}
 }

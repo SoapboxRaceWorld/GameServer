@@ -5,10 +5,10 @@ namespace Victory.DataLayer.Serialization
 	public class UdpRelayCryptoTicket
 	{
 		[DataMember]
-		public System.String CryptoTicket {get; set;}
+		public string CryptoTicket {get; set;}
 		[DataMember]
-		public System.String SessionKey {get; set;}
+		public string SessionKey {get; set;}
 		[DataMember]
-		public System.String TicketIv {get; set;}
+		public string TicketIv {get; set;}
 	}
 }

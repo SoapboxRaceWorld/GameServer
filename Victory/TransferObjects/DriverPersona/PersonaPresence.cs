@@ -5,10 +5,10 @@ namespace Victory.TransferObjects.DriverPersona
 	public class PersonaPresence
 	{
 		[DataMember]
-		public System.Int64 personaId {get; set;}
+		public long personaId {get; set;}
 		[DataMember]
-		public System.Int32 presence {get; set;}
+		public int presence {get; set;}
 		[DataMember]
-		public System.Int64 userId {get; set;}
+		public long userId {get; set;}
 	}
 }

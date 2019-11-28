@@ -5,16 +5,16 @@ namespace Victory.Service.Objects
 	public class BadgeDefinitionPacket
 	{
 		[DataMember]
-		public System.String Background {get; set;}
+		public string Background {get; set;}
 		[DataMember]
-		public System.Int32 BadgeDefinitionId {get; set;}
+		public int BadgeDefinitionId {get; set;}
 		[DataMember]
-		public System.String Border {get; set;}
+		public string Border {get; set;}
 		[DataMember]
-		public System.String Description {get; set;}
+		public string Description {get; set;}
 		[DataMember]
-		public System.String Icon {get; set;}
+		public string Icon {get; set;}
 		[DataMember]
-		public System.String Name {get; set;}
+		public string Name {get; set;}
 	}
 }

@@ -5,6 +5,6 @@ namespace Victory.TransferObjects.DriverPersona
 	public class PersonaIdArray
 	{
 		[DataMember]
-		public System.Collections.Generic.List<System.Int64> PersonaIds {get; set;}
+		public System.Collections.Generic.List<long> PersonaIds {get; set;}
 	}
 }

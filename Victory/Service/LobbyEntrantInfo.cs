@@ -5,13 +5,13 @@ namespace Victory.Service
 	public class LobbyEntrantInfo
 	{
 		[DataMember]
-		public System.Int32 GridIndex {get; set;}
+		public int GridIndex {get; set;}
 		[DataMember]
-		public System.Single Heat {get; set;}
+		public float Heat {get; set;}
 		[DataMember]
-		public System.Int32 Level {get; set;}
+		public int Level {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 		[DataMember]
 		public Victory.Service.LobbyEntrantState State {get; set;}
 	}

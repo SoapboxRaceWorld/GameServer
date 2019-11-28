@@ -5,12 +5,12 @@ namespace Victory.DataLayer.Serialization.Event
 	public class RewardPart
 	{
 		[DataMember]
-		public System.Int32 RepPart {get; set;}
+		public int RepPart {get; set;}
 		[DataMember]
 		public Victory.DataLayer.Serialization.Event.enumRewardCategory RewardCategory {get; set;}
 		[DataMember]
 		public Victory.DataLayer.Serialization.Event.enumRewardType RewardType {get; set;}
 		[DataMember]
-		public System.Int32 TokenPart {get; set;}
+		public int TokenPart {get; set;}
 	}
 }

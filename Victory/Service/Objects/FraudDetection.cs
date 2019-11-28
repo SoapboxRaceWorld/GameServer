@@ -5,26 +5,26 @@ namespace Victory.Service.Objects
 	public class FraudDetection
 	{
 		[DataMember]
-		public System.Int32 Checksum {get; set;}
+		public int Checksum {get; set;}
 		[DataMember]
-		public System.Int32 IntValue1 {get; set;}
+		public int IntValue1 {get; set;}
 		[DataMember]
-		public System.Int32 IntValue2 {get; set;}
+		public int IntValue2 {get; set;}
 		[DataMember]
-		public System.Int32 IntValue3 {get; set;}
+		public int IntValue3 {get; set;}
 		[DataMember]
-		public System.Int32 IntValue4 {get; set;}
+		public int IntValue4 {get; set;}
 		[DataMember]
-		public System.Boolean IsEncrypted {get; set;}
+		public bool IsEncrypted {get; set;}
 		[DataMember]
-		public System.String ModuleName {get; set;}
+		public string ModuleName {get; set;}
 		[DataMember]
-		public System.String ModulePath {get; set;}
+		public string ModulePath {get; set;}
 		[DataMember]
-		public System.String ModuleValue {get; set;}
+		public string ModuleValue {get; set;}
 		[DataMember]
-		public System.String StringValue1 {get; set;}
+		public string StringValue1 {get; set;}
 		[DataMember]
-		public System.String StringValue2 {get; set;}
+		public string StringValue2 {get; set;}
 	}
 }

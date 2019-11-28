@@ -5,14 +5,14 @@ namespace Victory.TransferObjects.User
 	public class PersonaCCar
 	{
 		[DataMember]
-		public System.Int32 CCID {get; set;}
+		public int CCID {get; set;}
 		[DataMember]
-		public System.Int32 Durability {get; set;}
+		public int Durability {get; set;}
 		[DataMember]
-		public System.Single Heat {get; set;}
+		public float Heat {get; set;}
 		[DataMember]
-		public System.Boolean IsDefault {get; set;}
+		public bool IsDefault {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 	}
 }

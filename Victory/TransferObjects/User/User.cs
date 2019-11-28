@@ -5,62 +5,62 @@ namespace Victory.TransferObjects.User
 	public class User
 	{
 		[DataMember]
-		public System.String address1 {get; set;}
+		public string address1 {get; set;}
 		[DataMember]
-		public System.String address2 {get; set;}
+		public string address2 {get; set;}
 		[DataMember]
-		public System.String country {get; set;}
+		public string country {get; set;}
 		[DataMember]
-		public System.String dateCreated {get; set;}
+		public string dateCreated {get; set;}
 		[DataMember]
-		public System.String dob {get; set;}
+		public string dob {get; set;}
 		[DataMember]
-		public System.String email {get; set;}
+		public string email {get; set;}
 		[DataMember]
-		public System.String emailStatus {get; set;}
+		public string emailStatus {get; set;}
 		[DataMember]
-		public System.String firstName {get; set;}
+		public string firstName {get; set;}
 		[DataMember]
-		public System.Boolean fullGameAccess {get; set;}
+		public bool fullGameAccess {get; set;}
 		[DataMember]
-		public System.String gender {get; set;}
+		public string gender {get; set;}
 		[DataMember]
-		public System.String idDigits {get; set;}
+		public string idDigits {get; set;}
 		[DataMember]
-		public System.Boolean isComplete {get; set;}
+		public bool isComplete {get; set;}
 		[DataMember]
-		public System.String landlinePhone {get; set;}
+		public string landlinePhone {get; set;}
 		[DataMember]
-		public System.String language {get; set;}
+		public string language {get; set;}
 		[DataMember]
-		public System.String lastAuthDate {get; set;}
+		public string lastAuthDate {get; set;}
 		[DataMember]
-		public System.String lastName {get; set;}
+		public string lastName {get; set;}
 		[DataMember]
-		public System.String mobile {get; set;}
+		public string mobile {get; set;}
 		[DataMember]
-		public System.String nickname {get; set;}
+		public string nickname {get; set;}
 		[DataMember]
-		public System.String postalCode {get; set;}
+		public string postalCode {get; set;}
 		[DataMember]
-		public System.String realName {get; set;}
+		public string realName {get; set;}
 		[DataMember]
-		public System.String reasonCode {get; set;}
+		public string reasonCode {get; set;}
 		[DataMember]
-		public System.Int64 remoteUserId {get; set;}
+		public long remoteUserId {get; set;}
 		[DataMember]
-		public System.String securityToken {get; set;}
+		public string securityToken {get; set;}
 		[DataMember]
-		public System.String starterPackEntitlementTag {get; set;}
+		public string starterPackEntitlementTag {get; set;}
 		[DataMember]
-		public System.String status {get; set;}
+		public string status {get; set;}
 		[DataMember]
-		public System.Boolean subscribeMsg {get; set;}
+		public bool subscribeMsg {get; set;}
 		[DataMember]
-		public System.String tosVersion {get; set;}
+		public string tosVersion {get; set;}
 		[DataMember]
-		public System.Int64 userId {get; set;}
+		public long userId {get; set;}
 		[DataMember]
-		public System.String username {get; set;}
+		public string username {get; set;}
 	}
 }

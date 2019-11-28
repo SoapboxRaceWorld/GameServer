@@ -5,8 +5,8 @@ namespace Victory.Service.Objects
 	public class BadgeInput
 	{
 		[DataMember]
-		public System.Int32 BadgeDefinitionId {get; set;}
+		public int BadgeDefinitionId {get; set;}
 		[DataMember]
-		public System.Int16 SlotId {get; set;}
+		public short SlotId {get; set;}
 	}
 }

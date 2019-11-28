@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class InvalidBasketItemTrans
 	{
 		[DataMember]
-		public System.Int32 Index {get; set;}
+		public int Index {get; set;}
 		[DataMember]
-		public System.Int32 Reason {get; set;}
+		public int Reason {get; set;}
 	}
 }

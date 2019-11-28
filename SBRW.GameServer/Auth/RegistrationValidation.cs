@@ -10,7 +10,8 @@ namespace SBRW.GameServer.Auth
     {
         public RegistrationValidation()
         {
-            RuleFor(vm => vm.Email).NotEmpty().WithMessage("Email cannot be empty");
+            RuleFor(vm => vm.Email).NotEmpty().WithMessage("Email cannot be empty").EmailAddress()
+                .WithMessage("Email must be valid");
             RuleFor(vm => vm.Password).NotEmpty().WithMessage("Password cannot be empty");
         }
     }

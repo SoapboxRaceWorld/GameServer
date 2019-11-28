@@ -7,13 +7,13 @@ namespace Victory.DataLayer.Serialization.LoginAnnouncement
 		[DataMember]
 		public Victory.DataObjects.Objects.LoginAnnouncement.LoginAnnouncementContext Context {get; set;}
 		[DataMember]
-		public System.Int32 Id {get; set;}
+		public int Id {get; set;}
 		[DataMember]
-		public System.Int32 ImageChecksum {get; set;}
+		public int ImageChecksum {get; set;}
 		[DataMember]
-		public System.String ImageUrl {get; set;}
+		public string ImageUrl {get; set;}
 		[DataMember]
-		public System.String Target {get; set;}
+		public string Target {get; set;}
 		[DataMember]
 		public Victory.DataObjects.Objects.LoginAnnouncement.LoginAnnouncementType Type {get; set;}
 	}

@@ -7,8 +7,8 @@ namespace Victory.Service
 		[DataMember]
 		public Victory.Service.SecurityChallenge Challenge {get; set;}
 		[DataMember]
-		public System.Int32 EventId {get; set;}
+		public int EventId {get; set;}
 		[DataMember]
-		public System.Int64 SessionId {get; set;}
+		public long SessionId {get; set;}
 	}
 }

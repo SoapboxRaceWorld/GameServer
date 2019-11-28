@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class EntitlementItemTrans
 	{
 		[DataMember]
-		public System.String EntitlementId {get; set;}
+		public string EntitlementId {get; set;}
 		[DataMember]
-		public System.Int32 Quantity {get; set;}
+		public int Quantity {get; set;}
 	}
 }

@@ -5,14 +5,14 @@ namespace Victory.Service.Objects
 	public class BadgePacket
 	{
 		[DataMember]
-		public System.Int32 AchievementRankId {get; set;}
+		public int AchievementRankId {get; set;}
 		[DataMember]
-		public System.Int32 BadgeDefinitionId {get; set;}
+		public int BadgeDefinitionId {get; set;}
 		[DataMember]
-		public System.Boolean IsRare {get; set;}
+		public bool IsRare {get; set;}
 		[DataMember]
-		public System.Single Rarity {get; set;}
+		public float Rarity {get; set;}
 		[DataMember]
-		public System.Int16 SlotId {get; set;}
+		public short SlotId {get; set;}
 	}
 }

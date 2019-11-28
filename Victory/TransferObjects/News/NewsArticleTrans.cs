@@ -7,24 +7,24 @@ namespace Victory.TransferObjects.News
 		[DataMember]
 		public System.DateTime ExpiryTime {get; set;}
 		[DataMember]
-		public System.Int32 Filters {get; set;}
+		public int Filters {get; set;}
 		[DataMember]
-		public System.Int32 IconType {get; set;}
+		public int IconType {get; set;}
 		[DataMember]
-		public System.String LongText_HALId {get; set;}
+		public string LongText_HALId {get; set;}
 		[DataMember]
-		public System.Int64 NewsId {get; set;}
+		public long NewsId {get; set;}
 		[DataMember]
-		public System.String Parameters {get; set;}
+		public string Parameters {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 		[DataMember]
-		public System.String ShortText_HALId {get; set;}
+		public string ShortText_HALId {get; set;}
 		[DataMember]
-		public System.Int32 Sticky {get; set;}
+		public int Sticky {get; set;}
 		[DataMember]
-		public System.Int64 Timestamp {get; set;}
+		public long Timestamp {get; set;}
 		[DataMember]
-		public System.Int32 Type {get; set;}
+		public int Type {get; set;}
 	}
 }

@@ -5,20 +5,20 @@ namespace Victory.DataLayer.Serialization.Event
 	public class LuckyDrawItem
 	{
 		[DataMember]
-		public System.String Description {get; set;}
+		public string Description {get; set;}
 		[DataMember]
-		public System.Int32 Hash {get; set;}
+		public int Hash {get; set;}
 		[DataMember]
-		public System.String Icon {get; set;}
+		public string Icon {get; set;}
 		[DataMember]
-		public System.Int32 RemainingUseCount {get; set;}
+		public int RemainingUseCount {get; set;}
 		[DataMember]
-		public System.Single ResellPrice {get; set;}
+		public float ResellPrice {get; set;}
 		[DataMember]
-		public System.String VirtualItem {get; set;}
+		public string VirtualItem {get; set;}
 		[DataMember]
-		public System.String VirtualItemType {get; set;}
+		public string VirtualItemType {get; set;}
 		[DataMember]
-		public System.Boolean WasSold {get; set;}
+		public bool WasSold {get; set;}
 	}
 }

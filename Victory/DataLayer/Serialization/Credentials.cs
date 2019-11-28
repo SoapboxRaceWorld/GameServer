@@ -5,10 +5,10 @@ namespace Victory.DataLayer.Serialization
 	public class Credentials
 	{
 		[DataMember]
-		public System.String Email {get; set;}
+		public string Email {get; set;}
 		[DataMember]
-		public System.String Password {get; set;}
+		public string Password {get; set;}
 		[DataMember]
-		public System.String Region {get; set;}
+		public string Region {get; set;}
 	}
 }

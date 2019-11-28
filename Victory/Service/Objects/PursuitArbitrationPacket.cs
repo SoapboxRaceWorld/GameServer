@@ -5,26 +5,26 @@ namespace Victory.Service.Objects
 	public class PursuitArbitrationPacket
 	{
 		[DataMember]
-		public System.Int32 CopsDeployed {get; set;}
+		public int CopsDeployed {get; set;}
 		[DataMember]
-		public System.Int32 CopsDisabled {get; set;}
+		public int CopsDisabled {get; set;}
 		[DataMember]
-		public System.Int32 CopsRammed {get; set;}
+		public int CopsRammed {get; set;}
 		[DataMember]
-		public System.Int32 CostToState {get; set;}
+		public int CostToState {get; set;}
 		[DataMember]
-		public System.Single Heat {get; set;}
+		public float Heat {get; set;}
 		[DataMember]
-		public System.Int32 Infractions {get; set;}
+		public int Infractions {get; set;}
 		[DataMember]
-		public System.UInt32 LongestJumpDurationInMilliseconds {get; set;}
+		public uint LongestJumpDurationInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int32 RoadBlocksDodged {get; set;}
+		public int RoadBlocksDodged {get; set;}
 		[DataMember]
-		public System.Int32 SpikeStripsDodged {get; set;}
+		public int SpikeStripsDodged {get; set;}
 		[DataMember]
-		public System.UInt32 SumOfJumpsDurationInMilliseconds {get; set;}
+		public uint SumOfJumpsDurationInMilliseconds {get; set;}
 		[DataMember]
-		public System.Single TopSpeed {get; set;}
+		public float TopSpeed {get; set;}
 	}
 }

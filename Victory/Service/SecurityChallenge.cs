@@ -5,12 +5,12 @@ namespace Victory.Service
 	public class SecurityChallenge
 	{
 		[DataMember]
-		public System.String ChallengeId {get; set;}
+		public string ChallengeId {get; set;}
 		[DataMember]
-		public System.Int32 LeftSize {get; set;}
+		public int LeftSize {get; set;}
 		[DataMember]
-		public System.String Pattern {get; set;}
+		public string Pattern {get; set;}
 		[DataMember]
-		public System.Int32 RightSize {get; set;}
+		public int RightSize {get; set;}
 	}
 }

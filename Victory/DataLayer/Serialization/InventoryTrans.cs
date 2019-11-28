@@ -7,16 +7,16 @@ namespace Victory.DataLayer.Serialization
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.InventoryItemTrans> InventoryItems {get; set;}
 		[DataMember]
-		public System.Int64 PerformancePartsCapacity {get; set;}
+		public long PerformancePartsCapacity {get; set;}
 		[DataMember]
-		public System.Int64 PerformancePartsUsedSlotCount {get; set;}
+		public long PerformancePartsUsedSlotCount {get; set;}
 		[DataMember]
-		public System.Int64 SkillModPartsCapacity {get; set;}
+		public long SkillModPartsCapacity {get; set;}
 		[DataMember]
-		public System.Int64 SkillModPartsUsedSlotCount {get; set;}
+		public long SkillModPartsUsedSlotCount {get; set;}
 		[DataMember]
-		public System.Int64 VisualPartsCapacity {get; set;}
+		public long VisualPartsCapacity {get; set;}
 		[DataMember]
-		public System.Int64 VisualPartsUsedSlotCount {get; set;}
+		public long VisualPartsUsedSlotCount {get; set;}
 	}
 }

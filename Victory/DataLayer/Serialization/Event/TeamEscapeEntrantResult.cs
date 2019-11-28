@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization.Event
 	public class TeamEscapeEntrantResult
 	{
 		[DataMember]
-		public System.Single DistanceToFinish {get; set;}
+		public float DistanceToFinish {get; set;}
 		[DataMember]
-		public System.Single FractionCompleted {get; set;}
+		public float FractionCompleted {get; set;}
 	}
 }

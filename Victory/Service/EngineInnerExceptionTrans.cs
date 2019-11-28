@@ -5,12 +5,12 @@ namespace Victory.Service
 	public class EngineInnerExceptionTrans
 	{
 		[DataMember]
-		public System.String Description {get; set;}
+		public string Description {get; set;}
 		[DataMember]
-		public System.Int32 ErrorCode {get; set;}
+		public int ErrorCode {get; set;}
 		[DataMember]
-		public System.String Message {get; set;}
+		public string Message {get; set;}
 		[DataMember]
-		public System.String StackTrace {get; set;}
+		public string StackTrace {get; set;}
 	}
 }

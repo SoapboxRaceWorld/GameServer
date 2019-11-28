@@ -5,12 +5,12 @@ namespace Victory.Service.Objects
 	public class ChatTranscript
 	{
 		[DataMember]
-		public System.String Message {get; set;}
+		public string Message {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 		[DataMember]
-		public System.String TargetPersonaId {get; set;}
+		public string TargetPersonaId {get; set;}
 		[DataMember]
-		public System.Int64 UserId {get; set;}
+		public long UserId {get; set;}
 	}
 }

@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class WalletTrans
 	{
 		[DataMember]
-		public System.Double Balance {get; set;}
+		public double Balance {get; set;}
 		[DataMember]
-		public System.String Currency {get; set;}
+		public string Currency {get; set;}
 	}
 }

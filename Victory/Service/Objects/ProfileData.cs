@@ -7,26 +7,26 @@ namespace Victory.Service.Objects
 		[DataMember]
 		public System.Collections.Generic.List<Victory.Service.Objects.BadgePacket> Badges {get; set;}
 		[DataMember]
-		public System.Double Cash {get; set;}
+		public double Cash {get; set;}
 		[DataMember]
-		public System.Int32 IconIndex {get; set;}
+		public int IconIndex {get; set;}
 		[DataMember]
-		public System.Int32 Level {get; set;}
+		public int Level {get; set;}
 		[DataMember]
-		public System.String Motto {get; set;}
+		public string Motto {get; set;}
 		[DataMember]
-		public System.String Name {get; set;}
+		public string Name {get; set;}
 		[DataMember]
-		public System.Single PercentToLevel {get; set;}
+		public float PercentToLevel {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 		[DataMember]
-		public System.Double Rating {get; set;}
+		public double Rating {get; set;}
 		[DataMember]
-		public System.Double Rep {get; set;}
+		public double Rep {get; set;}
 		[DataMember]
-		public System.Int32 RepAtCurrentLevel {get; set;}
+		public int RepAtCurrentLevel {get; set;}
 		[DataMember]
-		public System.Int32 Score {get; set;}
+		public int Score {get; set;}
 	}
 }

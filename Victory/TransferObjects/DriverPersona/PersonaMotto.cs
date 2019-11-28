@@ -5,8 +5,8 @@ namespace Victory.TransferObjects.DriverPersona
 	public class PersonaMotto
 	{
 		[DataMember]
-		public System.String message {get; set;}
+		public string message {get; set;}
 		[DataMember]
-		public System.Int64 personaId {get; set;}
+		public long personaId {get; set;}
 	}
 }

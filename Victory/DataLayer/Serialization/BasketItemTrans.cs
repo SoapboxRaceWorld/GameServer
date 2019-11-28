@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class BasketItemTrans
 	{
 		[DataMember]
-		public System.String ProductId {get; set;}
+		public string ProductId {get; set;}
 		[DataMember]
-		public System.Int32 Quantity {get; set;}
+		public int Quantity {get; set;}
 	}
 }

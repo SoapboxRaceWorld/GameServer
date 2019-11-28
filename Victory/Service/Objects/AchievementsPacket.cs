@@ -9,6 +9,6 @@ namespace Victory.Service.Objects
 		[DataMember]
 		public System.Collections.Generic.List<Victory.Service.Objects.AchievementDefinitionPacket> Definitions {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 	}
 }

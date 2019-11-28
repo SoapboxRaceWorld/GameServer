@@ -5,6 +5,6 @@ namespace Victory.DataLayer.Serialization.Event
 	public class PursuitEventResult
 	{
 		[DataMember]
-		public System.Single Heat {get; set;}
+		public float Heat {get; set;}
 	}
 }

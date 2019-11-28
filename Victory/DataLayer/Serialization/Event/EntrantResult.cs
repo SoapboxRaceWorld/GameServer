@@ -5,14 +5,14 @@ namespace Victory.DataLayer.Serialization.Event
 	public class EntrantResult
 	{
 		[DataMember]
-		public System.UInt32 EventDurationInMilliseconds {get; set;}
+		public uint EventDurationInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int64 EventSessionId {get; set;}
+		public long EventSessionId {get; set;}
 		[DataMember]
-		public System.Int32 FinishReason {get; set;}
+		public int FinishReason {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 		[DataMember]
-		public System.Int32 Ranking {get; set;}
+		public int Ranking {get; set;}
 	}
 }

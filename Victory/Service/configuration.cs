@@ -5,9 +5,9 @@ namespace Victory.Service
 	public class configuration
 	{
 		[DataMember]
-		public System.String gameserver {get; set;}
+		public string gameserver {get; set;}
 		[DataMember]
-		public System.String webserver {get; set;}
+		public string webserver {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.Service.region> regions {get; set;}
 		[DataMember]

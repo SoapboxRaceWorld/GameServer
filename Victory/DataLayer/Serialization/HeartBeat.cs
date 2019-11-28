@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class HeartBeat
 	{
 		[DataMember]
-		public System.Int32 MetagameFlags {get; set;}
+		public int MetagameFlags {get; set;}
 		[DataMember]
-		public System.Int32 enabledBitField {get; set;}
+		public int enabledBitField {get; set;}
 	}
 }

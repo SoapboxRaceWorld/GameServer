@@ -11,12 +11,12 @@ namespace Victory.Service
 		[DataMember]
 		public Victory.Service.SessionInfo EventSession {get; set;}
 		[DataMember]
-		public System.Boolean IsNewRelayServer {get; set;}
+		public bool IsNewRelayServer {get; set;}
 		[DataMember]
-		public System.Int64 LobbyId {get; set;}
+		public long LobbyId {get; set;}
 		[DataMember]
-		public System.String UdpRelayHost {get; set;}
+		public string UdpRelayHost {get; set;}
 		[DataMember]
-		public System.Int32 UdpRelayPort {get; set;}
+		public int UdpRelayPort {get; set;}
 	}
 }

@@ -5,8 +5,8 @@ namespace Victory.Service.Objects
 	public class SecurityResponse
 	{
 		[DataMember]
-		public System.String ChallengeId {get; set;}
+		public string ChallengeId {get; set;}
 		[DataMember]
-		public System.Int64 Result {get; set;}
+		public long Result {get; set;}
 	}
 }

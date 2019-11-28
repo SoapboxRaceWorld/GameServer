@@ -7,6 +7,6 @@ namespace Victory.TransferObjects.DriverPersona
 		[DataMember]
 		public Victory.TransferObjects.DriverPersona.FriendPersona persona {get; set;}
 		[DataMember]
-		public System.Int32 result {get; set;}
+		public int result {get; set;}
 	}
 }

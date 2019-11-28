@@ -5,32 +5,32 @@ namespace Victory.DataLayer.Serialization
 	public class CategoryTrans
 	{
 		[DataMember]
-		public System.Int32 CatalogVersion {get; set;}
+		public int CatalogVersion {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.CategoryTrans> Categories {get; set;}
 		[DataMember]
-		public System.String DisplayName {get; set;}
+		public string DisplayName {get; set;}
 		[DataMember]
-		public System.Int32 FilterType {get; set;}
+		public int FilterType {get; set;}
 		[DataMember]
-		public System.String Icon {get; set;}
+		public string Icon {get; set;}
 		[DataMember]
-		public System.String Id {get; set;}
+		public string Id {get; set;}
 		[DataMember]
-		public System.String LongDescription {get; set;}
+		public string LongDescription {get; set;}
 		[DataMember]
-		public System.String Name {get; set;}
+		public string Name {get; set;}
 		[DataMember]
-		public System.Int32 Priority {get; set;}
+		public int Priority {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.ProductTrans> Products {get; set;}
 		[DataMember]
-		public System.String ShortDescription {get; set;}
+		public string ShortDescription {get; set;}
 		[DataMember]
-		public System.Boolean ShowInNavigationPane {get; set;}
+		public bool ShowInNavigationPane {get; set;}
 		[DataMember]
-		public System.Boolean ShowPromoPage {get; set;}
+		public bool ShowPromoPage {get; set;}
 		[DataMember]
-		public System.String WebIcon {get; set;}
+		public string WebIcon {get; set;}
 	}
 }

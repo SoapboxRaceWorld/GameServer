@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization
 	public class UdpRelayInfo
 	{
 		[DataMember]
-		public System.String Host {get; set;}
+		public string Host {get; set;}
 		[DataMember]
-		public System.Int32 Port {get; set;}
+		public int Port {get; set;}
 	}
 }

@@ -5,18 +5,18 @@ namespace Victory.DataLayer.Serialization
 	public class LauncherStartTrans
 	{
 		[DataMember]
-		public System.String autoLogin {get; set;}
+		public string autoLogin {get; set;}
 		[DataMember]
-		public System.String autoStart {get; set;}
+		public string autoStart {get; set;}
 		[DataMember]
-		public System.String language {get; set;}
+		public string language {get; set;}
 		[DataMember]
-		public System.String languageCode {get; set;}
+		public string languageCode {get; set;}
 		[DataMember]
-		public System.String region {get; set;}
+		public string region {get; set;}
 		[DataMember]
-		public System.String sku {get; set;}
+		public string sku {get; set;}
 		[DataMember]
-		public System.Int64 userID {get; set;}
+		public long userID {get; set;}
 	}
 }

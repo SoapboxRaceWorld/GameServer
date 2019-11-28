@@ -6,9 +6,9 @@ using Victory.TransferObjects.User;
 
 namespace SBRW.GameServer.Controllers.Game
 {
-    [Route("api/[controller]")]
+    [Route("nfsw/Engine.svc/[controller]")]
     [ApiController]
-    [Consumes(MediaTypeNames.Application.Xml)]
+    [Consumes(MediaTypeNames.Text.Xml)]
     [Produces(MediaTypeNames.Application.Xml)]
     public class UserController : ControllerBase
     {
@@ -24,7 +24,15 @@ namespace SBRW.GameServer.Controllers.Game
             {
                 defaultPersonaIdx = 0,
                 personas = new List<ProfileData>(),
-                user = new User()
+                user = new User
+                {
+                    fullGameAccess = false,
+                    isComplete = false,
+                    remoteUserId = 1,
+                    securityToken = Request.Headers["securityToken"][0],
+                    subscribeMsg = false,
+                    userId = 1
+                }
             };
         }
     }

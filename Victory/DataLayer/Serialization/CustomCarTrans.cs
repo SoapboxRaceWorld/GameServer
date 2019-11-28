@@ -5,35 +5,35 @@ namespace Victory.DataLayer.Serialization
 	public class CustomCarTrans
 	{
 		[DataMember]
-		public System.Int32 BaseCar {get; set;}
+		public int BaseCar {get; set;}
 		[DataMember]
-		public System.Int32 CarClassHash {get; set;}
+		public int CarClassHash {get; set;}
 		[DataMember]
-		public System.Int32 Id {get; set;}
+		public int Id {get; set;}
 		[DataMember]
-		public System.Boolean IsPreset {get; set;}
+		public bool IsPreset {get; set;}
 		[DataMember]
-		public System.Int32 Level {get; set;}
+		public int Level {get; set;}
 		[DataMember]
-		public System.String Name {get; set;}
+		public string Name {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.CustomPaintTrans> Paints {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.PerformancePartTrans> PerformanceParts {get; set;}
 		[DataMember]
-		public System.Int32 PhysicsProfileHash {get; set;}
+		public int PhysicsProfileHash {get; set;}
 		[DataMember]
-		public System.Int32 Rating {get; set;}
+		public int Rating {get; set;}
 		[DataMember]
-		public System.Single ResalePrice {get; set;}
+		public float ResalePrice {get; set;}
 		[DataMember]
-		public System.Single RideHeightDrop {get; set;}
+		public float RideHeightDrop {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.SkillModPartTrans> SkillModParts {get; set;}
 		[DataMember]
-		public System.Int32 SkillModSlotCount {get; set;}
+		public int SkillModSlotCount {get; set;}
 		[DataMember]
-		public System.Int32 Version {get; set;}
+		public int Version {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.CustomVinylTrans> Vinyls {get; set;}
 		[DataMember]

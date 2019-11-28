@@ -5,8 +5,8 @@ namespace Victory.Service
 	public class Cdn
 	{
 		[DataMember]
-		public System.String game {get; set;}
+		public string game {get; set;}
 		[DataMember]
-		public System.String launcher {get; set;}
+		public string launcher {get; set;}
 	}
 }

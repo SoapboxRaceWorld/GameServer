@@ -7,7 +7,7 @@ namespace Victory.DataLayer.Serialization.Event
 		[DataMember]
 		public Victory.DataLayer.Serialization.Event.Reward FinalRewards {get; set;}
 		[DataMember]
-		public System.Boolean HasLeveledUp {get; set;}
+		public bool HasLeveledUp {get; set;}
 		[DataMember]
 		public Victory.DataLayer.Serialization.Event.LuckyDrawInfo LuckyDrawInfo {get; set;}
 		[DataMember]

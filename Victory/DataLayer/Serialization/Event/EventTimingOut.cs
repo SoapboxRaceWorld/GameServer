@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization.Event
 	public class EventTimingOut
 	{
 		[DataMember]
-		public System.Int64 EventSessionId {get; set;}
+		public long EventSessionId {get; set;}
 		[DataMember]
-		public System.Int64 TimeInMilliseconds {get; set;}
+		public long TimeInMilliseconds {get; set;}
 	}
 }

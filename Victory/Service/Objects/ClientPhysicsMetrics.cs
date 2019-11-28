@@ -5,16 +5,16 @@ namespace Victory.Service.Objects
 	public class ClientPhysicsMetrics
 	{
 		[DataMember]
-		public System.Single AccelerationAverage {get; set;}
+		public float AccelerationAverage {get; set;}
 		[DataMember]
-		public System.Single AccelerationMaximum {get; set;}
+		public float AccelerationMaximum {get; set;}
 		[DataMember]
-		public System.Single AccelerationMedian {get; set;}
+		public float AccelerationMedian {get; set;}
 		[DataMember]
-		public System.Single SpeedAverage {get; set;}
+		public float SpeedAverage {get; set;}
 		[DataMember]
-		public System.Single SpeedMaximum {get; set;}
+		public float SpeedMaximum {get; set;}
 		[DataMember]
-		public System.Single SpeedMedian {get; set;}
+		public float SpeedMedian {get; set;}
 	}
 }

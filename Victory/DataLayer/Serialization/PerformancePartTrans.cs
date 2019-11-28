@@ -5,6 +5,6 @@ namespace Victory.DataLayer.Serialization
 	public class PerformancePartTrans
 	{
 		[DataMember]
-		public System.Int32 PerformancePartAttribHash {get; set;}
+		public int PerformancePartAttribHash {get; set;}
 	}
 }

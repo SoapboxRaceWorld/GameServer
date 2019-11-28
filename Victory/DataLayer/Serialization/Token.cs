@@ -5,10 +5,10 @@ namespace Victory.DataLayer.Serialization
 	public class Token
 	{
 		[DataMember]
-		public System.Boolean EualaAccepted {get; set;}
+		public bool EualaAccepted {get; set;}
 		[DataMember]
-		public System.String Region {get; set;}
+		public string Region {get; set;}
 		[DataMember]
-		public System.String Value {get; set;}
+		public string Value {get; set;}
 	}
 }

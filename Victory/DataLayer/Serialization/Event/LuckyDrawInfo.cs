@@ -7,16 +7,16 @@ namespace Victory.DataLayer.Serialization.Event
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.Event.LuckyDrawBox> Boxes {get; set;}
 		[DataMember]
-		public System.String CardDeck {get; set;}
+		public string CardDeck {get; set;}
 		[DataMember]
-		public System.Int32 CurrentStreak {get; set;}
+		public int CurrentStreak {get; set;}
 		[DataMember]
-		public System.Boolean IsStreakBroken {get; set;}
+		public bool IsStreakBroken {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.Event.LuckyDrawItem> Items {get; set;}
 		[DataMember]
-		public System.Int32 NumBoxAnimations {get; set;}
+		public int NumBoxAnimations {get; set;}
 		[DataMember]
-		public System.Int32 NumCards {get; set;}
+		public int NumCards {get; set;}
 	}
 }

@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization.Event
 	public class Reward
 	{
 		[DataMember]
-		public System.Int32 Rep {get; set;}
+		public int Rep {get; set;}
 		[DataMember]
-		public System.Int32 Tokens {get; set;}
+		public int Tokens {get; set;}
 	}
 }

@@ -5,8 +5,8 @@ namespace Victory.Service.Objects
 	public class AchievementRewards
 	{
 		[DataMember]
-		public System.Int32 AchievementRankId {get; set;}
+		public int AchievementRankId {get; set;}
 		[DataMember]
-		public System.String VisualStyle {get; set;}
+		public string VisualStyle {get; set;}
 	}
 }

@@ -5,8 +5,8 @@ namespace Victory.DataLayer.Serialization.Event
 	public class RouteEntrantResult
 	{
 		[DataMember]
-		public System.UInt32 BestLapDurationInMilliseconds {get; set;}
+		public uint BestLapDurationInMilliseconds {get; set;}
 		[DataMember]
-		public System.Single TopSpeed {get; set;}
+		public float TopSpeed {get; set;}
 	}
 }

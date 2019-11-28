@@ -7,24 +7,24 @@ namespace Victory.Service.Objects
 		[DataMember]
 		public System.DateTime AchievedOn {get; set;}
 		[DataMember]
-		public System.Int32 AchievementRankId {get; set;}
+		public int AchievementRankId {get; set;}
 		[DataMember]
-		public System.Boolean IsRare {get; set;}
+		public bool IsRare {get; set;}
 		[DataMember]
-		public System.Int16 Points {get; set;}
+		public short Points {get; set;}
 		[DataMember]
-		public System.Int16 Rank {get; set;}
+		public short Rank {get; set;}
 		[DataMember]
-		public System.Single Rarity {get; set;}
+		public float Rarity {get; set;}
 		[DataMember]
-		public System.String RewardDescription {get; set;}
+		public string RewardDescription {get; set;}
 		[DataMember]
-		public System.String RewardType {get; set;}
+		public string RewardType {get; set;}
 		[DataMember]
-		public System.String RewardVisualStyle {get; set;}
+		public string RewardVisualStyle {get; set;}
 		[DataMember]
 		public Victory.Service.Objects.AchievementState State {get; set;}
 		[DataMember]
-		public System.Int64 ThresholdValue {get; set;}
+		public long ThresholdValue {get; set;}
 	}
 }

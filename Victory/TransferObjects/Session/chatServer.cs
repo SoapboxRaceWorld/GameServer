@@ -7,10 +7,10 @@ namespace Victory.TransferObjects.Session
 		[DataMember]
 		public System.Collections.Generic.List<Victory.TransferObjects.Session.chatRoom> Rooms {get; set;}
 		[DataMember]
-		public System.String ip {get; set;}
+		public string ip {get; set;}
 		[DataMember]
-		public System.Int32 port {get; set;}
+		public int port {get; set;}
 		[DataMember]
-		public System.String prefix {get; set;}
+		public string prefix {get; set;}
 	}
 }

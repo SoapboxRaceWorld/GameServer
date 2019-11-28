@@ -5,12 +5,12 @@ namespace Victory.Service.Objects
 	public class ShardInfo
 	{
 		[DataMember]
-		public System.Int32 RegionId {get; set;}
+		public int RegionId {get; set;}
 		[DataMember]
-		public System.String RegionName {get; set;}
+		public string RegionName {get; set;}
 		[DataMember]
-		public System.String ShardName {get; set;}
+		public string ShardName {get; set;}
 		[DataMember]
-		public System.String Url {get; set;}
+		public string Url {get; set;}
 	}
 }

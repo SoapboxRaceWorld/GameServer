@@ -7,20 +7,20 @@ namespace Victory.Service.Objects
 		[DataMember]
 		public System.Collections.Generic.List<Victory.Service.Objects.BadgePacket> Badges {get; set;}
 		[DataMember]
-		public System.Int32 IconIndex {get; set;}
+		public int IconIndex {get; set;}
 		[DataMember]
-		public System.Int32 Level {get; set;}
+		public int Level {get; set;}
 		[DataMember]
-		public System.String Motto {get; set;}
+		public string Motto {get; set;}
 		[DataMember]
-		public System.String Name {get; set;}
+		public string Name {get; set;}
 		[DataMember]
-		public System.Int64 PersonaId {get; set;}
+		public long PersonaId {get; set;}
 		[DataMember]
-		public System.Int32 Presence {get; set;}
+		public int Presence {get; set;}
 		[DataMember]
-		public System.Int32 Score {get; set;}
+		public int Score {get; set;}
 		[DataMember]
-		public System.Int64 UserId {get; set;}
+		public long UserId {get; set;}
 	}
 }

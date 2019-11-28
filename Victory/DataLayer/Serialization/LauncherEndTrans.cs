@@ -5,10 +5,10 @@ namespace Victory.DataLayer.Serialization
 	public class LauncherEndTrans
 	{
 		[DataMember]
-		public System.String leaveReasonID {get; set;}
+		public string leaveReasonID {get; set;}
 		[DataMember]
-		public System.String patchTime {get; set;}
+		public string patchTime {get; set;}
 		[DataMember]
-		public System.Int64 userID {get; set;}
+		public long userID {get; set;}
 	}
 }

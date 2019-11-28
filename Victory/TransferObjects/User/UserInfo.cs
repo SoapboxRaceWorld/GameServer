@@ -5,7 +5,7 @@ namespace Victory.TransferObjects.User
 	public class UserInfo
 	{
 		[DataMember]
-		public System.Int32 defaultPersonaIdx {get; set;}
+		public int defaultPersonaIdx {get; set;}
 		[DataMember]
 		public System.Collections.Generic.List<Victory.TransferObjects.User.ProfileData> personas {get; set;}
 		[DataMember]

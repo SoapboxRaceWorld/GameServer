@@ -5,52 +5,52 @@ namespace Victory.DataLayer.Serialization.Event
 	public class EventDefinition
 	{
 		[DataMember]
-		public System.Int32 CarClassHash {get; set;}
+		public int CarClassHash {get; set;}
 		[DataMember]
-		public System.Int32 Coins {get; set;}
+		public int Coins {get; set;}
 		[DataMember]
 		public Victory.DataLayer.Serialization.Vector3 EngagePoint {get; set;}
 		[DataMember]
-		public System.Int32 EventId {get; set;}
+		public int EventId {get; set;}
 		[DataMember]
-		public System.Int32 EventLocalization {get; set;}
+		public int EventLocalization {get; set;}
 		[DataMember]
-		public System.Int32 EventModeDescriptionLocalization {get; set;}
+		public int EventModeDescriptionLocalization {get; set;}
 		[DataMember]
-		public System.String EventModeIcon {get; set;}
+		public string EventModeIcon {get; set;}
 		[DataMember]
-		public System.Int32 EventModeId {get; set;}
+		public int EventModeId {get; set;}
 		[DataMember]
-		public System.Int32 EventModeLocalization {get; set;}
+		public int EventModeLocalization {get; set;}
 		[DataMember]
-		public System.Boolean IsEnabled {get; set;}
+		public bool IsEnabled {get; set;}
 		[DataMember]
-		public System.Boolean IsLocked {get; set;}
+		public bool IsLocked {get; set;}
 		[DataMember]
-		public System.Int32 Laps {get; set;}
+		public int Laps {get; set;}
 		[DataMember]
-		public System.Single Length {get; set;}
+		public float Length {get; set;}
 		[DataMember]
-		public System.Int32 MaxClassRating {get; set;}
+		public int MaxClassRating {get; set;}
 		[DataMember]
-		public System.Int32 MaxEntrants {get; set;}
+		public int MaxEntrants {get; set;}
 		[DataMember]
-		public System.Int32 MaxLevel {get; set;}
+		public int MaxLevel {get; set;}
 		[DataMember]
-		public System.Int32 MinClassRating {get; set;}
+		public int MinClassRating {get; set;}
 		[DataMember]
-		public System.Int32 MinEntrants {get; set;}
+		public int MinEntrants {get; set;}
 		[DataMember]
-		public System.Int32 MinLevel {get; set;}
+		public int MinLevel {get; set;}
 		[DataMember]
-		public System.Int32 RegionLocalization {get; set;}
+		public int RegionLocalization {get; set;}
 		[DataMember]
-		public System.Collections.Generic.List<System.Int32> RewardModes {get; set;}
+		public System.Collections.Generic.List<int> RewardModes {get; set;}
 		[DataMember]
-		public System.Single TimeLimit {get; set;}
+		public float TimeLimit {get; set;}
 		[DataMember]
-		public System.String TrackLayoutMap {get; set;}
+		public string TrackLayoutMap {get; set;}
 		[DataMember]
-		public System.Int32 TrackLocalization {get; set;}
+		public int TrackLocalization {get; set;}
 	}
 }

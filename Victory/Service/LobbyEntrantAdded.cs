@@ -5,6 +5,6 @@ namespace Victory.Service
 	public class LobbyEntrantAdded
 	{
 		[DataMember]
-		public System.Int64 LobbyId {get; set;}
+		public long LobbyId {get; set;}
 	}
 }

@@ -5,14 +5,14 @@ namespace Victory.Service
 	public class LobbyCountdown
 	{
 		[DataMember]
-		public System.Int32 EventId {get; set;}
+		public int EventId {get; set;}
 		[DataMember]
-		public System.Boolean IsWaiting {get; set;}
+		public bool IsWaiting {get; set;}
 		[DataMember]
-		public System.Int32 LobbyCountdownInMilliseconds {get; set;}
+		public int LobbyCountdownInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int64 LobbyId {get; set;}
+		public long LobbyId {get; set;}
 		[DataMember]
-		public System.Int32 LobbyStuckDurationInMilliseconds {get; set;}
+		public int LobbyStuckDurationInMilliseconds {get; set;}
 	}
 }

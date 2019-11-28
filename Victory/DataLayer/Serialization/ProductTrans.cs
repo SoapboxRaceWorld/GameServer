@@ -7,40 +7,40 @@ namespace Victory.DataLayer.Serialization
 		[DataMember]
 		public System.Collections.Generic.List<Victory.DataLayer.Serialization.ProductTrans> BundleItems {get; set;}
 		[DataMember]
-		public System.String CategoryId {get; set;}
+		public string CategoryId {get; set;}
 		[DataMember]
-		public System.String Currency {get; set;}
+		public string Currency {get; set;}
 		[DataMember]
-		public System.String Description {get; set;}
+		public string Description {get; set;}
 		[DataMember]
-		public System.Int32 DurationMinute {get; set;}
+		public int DurationMinute {get; set;}
 		[DataMember]
-		public System.Int32 Hash {get; set;}
+		public int Hash {get; set;}
 		[DataMember]
-		public System.String Icon {get; set;}
+		public string Icon {get; set;}
 		[DataMember]
-		public System.Int32 Level {get; set;}
+		public int Level {get; set;}
 		[DataMember]
-		public System.String LongDescription {get; set;}
+		public string LongDescription {get; set;}
 		[DataMember]
-		public System.Double Price {get; set;}
+		public double Price {get; set;}
 		[DataMember]
-		public System.Int32 Priority {get; set;}
+		public int Priority {get; set;}
 		[DataMember]
-		public System.String ProductId {get; set;}
+		public string ProductId {get; set;}
 		[DataMember]
-		public System.String ProductTitle {get; set;}
+		public string ProductTitle {get; set;}
 		[DataMember]
-		public System.String ProductType {get; set;}
+		public string ProductType {get; set;}
 		[DataMember]
-		public System.String SecondaryIcon {get; set;}
+		public string SecondaryIcon {get; set;}
 		[DataMember]
-		public System.Int32 UseCount {get; set;}
+		public int UseCount {get; set;}
 		[DataMember]
-		public System.String VisualStyle {get; set;}
+		public string VisualStyle {get; set;}
 		[DataMember]
-		public System.String WebIcon {get; set;}
+		public string WebIcon {get; set;}
 		[DataMember]
-		public System.String WebLocation {get; set;}
+		public string WebLocation {get; set;}
 	}
 }

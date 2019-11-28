@@ -5,46 +5,46 @@ namespace Victory.DataLayer.Serialization
 	public class CustomVinylTrans
 	{
 		[DataMember]
-		public System.Int32 Hash {get; set;}
+		public int Hash {get; set;}
 		[DataMember]
-		public System.Int32 Hue1 {get; set;}
+		public int Hue1 {get; set;}
 		[DataMember]
-		public System.Int32 Hue2 {get; set;}
+		public int Hue2 {get; set;}
 		[DataMember]
-		public System.Int32 Hue3 {get; set;}
+		public int Hue3 {get; set;}
 		[DataMember]
-		public System.Int32 Hue4 {get; set;}
+		public int Hue4 {get; set;}
 		[DataMember]
-		public System.Int32 Layer {get; set;}
+		public int Layer {get; set;}
 		[DataMember]
-		public System.Boolean Mir {get; set;}
+		public bool Mir {get; set;}
 		[DataMember]
-		public System.Int32 Rot {get; set;}
+		public int Rot {get; set;}
 		[DataMember]
-		public System.Int32 Sat1 {get; set;}
+		public int Sat1 {get; set;}
 		[DataMember]
-		public System.Int32 Sat2 {get; set;}
+		public int Sat2 {get; set;}
 		[DataMember]
-		public System.Int32 Sat3 {get; set;}
+		public int Sat3 {get; set;}
 		[DataMember]
-		public System.Int32 Sat4 {get; set;}
+		public int Sat4 {get; set;}
 		[DataMember]
-		public System.Int32 ScaleX {get; set;}
+		public int ScaleX {get; set;}
 		[DataMember]
-		public System.Int32 ScaleY {get; set;}
+		public int ScaleY {get; set;}
 		[DataMember]
-		public System.Int32 Shear {get; set;}
+		public int Shear {get; set;}
 		[DataMember]
-		public System.Int32 TranX {get; set;}
+		public int TranX {get; set;}
 		[DataMember]
-		public System.Int32 TranY {get; set;}
+		public int TranY {get; set;}
 		[DataMember]
-		public System.Int32 Var1 {get; set;}
+		public int Var1 {get; set;}
 		[DataMember]
-		public System.Int32 Var2 {get; set;}
+		public int Var2 {get; set;}
 		[DataMember]
-		public System.Int32 Var3 {get; set;}
+		public int Var3 {get; set;}
 		[DataMember]
-		public System.Int32 Var4 {get; set;}
+		public int Var4 {get; set;}
 	}
 }

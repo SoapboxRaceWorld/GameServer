@@ -5,24 +5,24 @@ namespace Victory.DataLayer.Serialization
 	public class InventoryItemTrans
 	{
 		[DataMember]
-		public System.String EntitlementTag {get; set;}
+		public string EntitlementTag {get; set;}
 		[DataMember]
 		public System.DateTime ExpirationDate {get; set;}
 		[DataMember]
-		public System.Int32 Hash {get; set;}
+		public int Hash {get; set;}
 		[DataMember]
-		public System.Int64 InventoryId {get; set;}
+		public long InventoryId {get; set;}
 		[DataMember]
-		public System.String ProductId {get; set;}
+		public string ProductId {get; set;}
 		[DataMember]
-		public System.Int64 RemainingUseCount {get; set;}
+		public long RemainingUseCount {get; set;}
 		[DataMember]
-		public System.Double ResellPrice {get; set;}
+		public double ResellPrice {get; set;}
 		[DataMember]
-		public System.String Status {get; set;}
+		public string Status {get; set;}
 		[DataMember]
-		public System.String StringHash {get; set;}
+		public string StringHash {get; set;}
 		[DataMember]
-		public System.String VirtualItemType {get; set;}
+		public string VirtualItemType {get; set;}
 	}
 }

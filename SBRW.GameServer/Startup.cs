@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using SBRW.Data;
 using SBRW.Data.Entities;
 using SBRW.GameServer.Auth;
+using SBRW.GameServer.Middleware;
 
 namespace SBRW.GameServer
 {
@@ -26,7 +27,9 @@ namespace SBRW.GameServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddMvc().AddXmlDataContractSerializerFormatters()
+            services.AddMvc()
+                .AddXmlDataContractSerializerFormatters()
+                .AddXmlSerializerFormatters()
                 .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddDbContext<GameDbContext>(options =>
             {
@@ -66,8 +69,10 @@ namespace SBRW.GameServer
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            app.UseMiddleware<BlackboxMiddleware>();
 
-            app.UseHttpsRedirection();
+//            app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -77,6 +82,7 @@ namespace SBRW.GameServer
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

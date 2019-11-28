@@ -5,8 +5,8 @@ namespace Victory.Service.Objects
 	public class AchievementProgress
 	{
 		[DataMember]
-		public System.Int32 AchievementDefinitionId {get; set;}
+		public int AchievementDefinitionId {get; set;}
 		[DataMember]
-		public System.Int64 CurrentValue {get; set;}
+		public long CurrentValue {get; set;}
 	}
 }

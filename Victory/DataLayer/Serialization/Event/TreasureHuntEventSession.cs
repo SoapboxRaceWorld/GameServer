@@ -5,14 +5,14 @@ namespace Victory.DataLayer.Serialization.Event
 	public class TreasureHuntEventSession
 	{
 		[DataMember]
-		public System.Int32 CoinsCollected {get; set;}
+		public int CoinsCollected {get; set;}
 		[DataMember]
-		public System.Boolean IsStreakBroken {get; set;}
+		public bool IsStreakBroken {get; set;}
 		[DataMember]
-		public System.Int32 NumCoins {get; set;}
+		public int NumCoins {get; set;}
 		[DataMember]
-		public System.Int32 Seed {get; set;}
+		public int Seed {get; set;}
 		[DataMember]
-		public System.Int32 Streak {get; set;}
+		public int Streak {get; set;}
 	}
 }

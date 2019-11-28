@@ -5,28 +5,28 @@ namespace Victory.DataLayer.Serialization
 	public class User_Settings
 	{
 		[DataMember]
-		public System.Int32 CarCacheAgeLimit {get; set;}
+		public int CarCacheAgeLimit {get; set;}
 		[DataMember]
-		public System.Boolean IsRaceNowEnabled {get; set;}
+		public bool IsRaceNowEnabled {get; set;}
 		[DataMember]
-		public System.Int32 MaxCarCacheSize {get; set;}
+		public int MaxCarCacheSize {get; set;}
 		[DataMember]
-		public System.Int32 MinRaceNowLevel {get; set;}
+		public int MinRaceNowLevel {get; set;}
 		[DataMember]
-		public System.Boolean VoipAvailable {get; set;}
+		public bool VoipAvailable {get; set;}
 		[DataMember]
-		public System.Collections.Generic.List<System.String> activatedHolidaySceneryGroups {get; set;}
+		public System.Collections.Generic.List<string> activatedHolidaySceneryGroups {get; set;}
 		[DataMember]
-		public System.Collections.Generic.List<System.Int64> activeHolidayIds {get; set;}
+		public System.Collections.Generic.List<long> activeHolidayIds {get; set;}
 		[DataMember]
-		public System.Collections.Generic.List<System.String> disactivatedHolidaySceneryGroups {get; set;}
+		public System.Collections.Generic.List<string> disactivatedHolidaySceneryGroups {get; set;}
 		[DataMember]
-		public System.Boolean firstTimeLogin {get; set;}
+		public bool firstTimeLogin {get; set;}
 		[DataMember]
-		public System.Int32 maxLevel {get; set;}
+		public int maxLevel {get; set;}
 		[DataMember]
-		public System.Boolean starterPackApplied {get; set;}
+		public bool starterPackApplied {get; set;}
 		[DataMember]
-		public System.Int64 userId {get; set;}
+		public long userId {get; set;}
 	}
 }

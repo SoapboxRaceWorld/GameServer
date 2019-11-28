@@ -5,8 +5,8 @@ namespace Victory.Service.Objects
 	public class ErrorReport
 	{
 		[DataMember]
-		public System.Int32 errorCode {get; set;}
+		public int errorCode {get; set;}
 		[DataMember]
-		public System.String errorDescription {get; set;}
+		public string errorDescription {get; set;}
 	}
 }

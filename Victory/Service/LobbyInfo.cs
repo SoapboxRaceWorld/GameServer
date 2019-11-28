@@ -9,12 +9,12 @@ namespace Victory.Service
 		[DataMember]
 		public System.Collections.Generic.List<Victory.Service.LobbyEntrantInfo> Entrants {get; set;}
 		[DataMember]
-		public System.Int32 EventId {get; set;}
+		public int EventId {get; set;}
 		[DataMember]
-		public System.Boolean IsInviteEnabled {get; set;}
+		public bool IsInviteEnabled {get; set;}
 		[DataMember]
-		public System.Int64 LobbyId {get; set;}
+		public long LobbyId {get; set;}
 		[DataMember]
-		public System.Int64 LobbyInviteId {get; set;}
+		public long LobbyInviteId {get; set;}
 	}
 }

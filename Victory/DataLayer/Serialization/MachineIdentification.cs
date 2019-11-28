@@ -5,20 +5,20 @@ namespace Victory.DataLayer.Serialization
 	public class MachineIdentification
 	{
 		[DataMember]
-		public System.UInt32 cpuID {get; set;}
+		public uint cpuID {get; set;}
 		[DataMember]
-		public System.String diskSerialNumber {get; set;}
+		public string diskSerialNumber {get; set;}
 		[DataMember]
-		public System.UInt32 gpuID {get; set;}
+		public uint gpuID {get; set;}
 		[DataMember]
-		public System.Int64 mac {get; set;}
+		public long mac {get; set;}
 		[DataMember]
-		public System.String machineName {get; set;}
+		public string machineName {get; set;}
 		[DataMember]
-		public System.Int64 userID {get; set;}
+		public long userID {get; set;}
 		[DataMember]
-		public System.String volumeName {get; set;}
+		public string volumeName {get; set;}
 		[DataMember]
-		public System.UInt32 volumeSerialNumber {get; set;}
+		public uint volumeSerialNumber {get; set;}
 	}
 }

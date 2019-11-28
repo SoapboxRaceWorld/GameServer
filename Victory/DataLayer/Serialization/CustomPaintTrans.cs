@@ -5,14 +5,14 @@ namespace Victory.DataLayer.Serialization
 	public class CustomPaintTrans
 	{
 		[DataMember]
-		public System.Int32 Group {get; set;}
+		public int Group {get; set;}
 		[DataMember]
-		public System.Int32 Hue {get; set;}
+		public int Hue {get; set;}
 		[DataMember]
-		public System.Int32 Sat {get; set;}
+		public int Sat {get; set;}
 		[DataMember]
-		public System.Int32 Slot {get; set;}
+		public int Slot {get; set;}
 		[DataMember]
-		public System.Int32 Var {get; set;}
+		public int Var {get; set;}
 	}
 }

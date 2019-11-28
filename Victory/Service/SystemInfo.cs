@@ -5,42 +5,42 @@ namespace Victory.Service
 	public class SystemInfo
 	{
 		[DataMember]
-		public System.String Branch {get; set;}
+		public string Branch {get; set;}
 		[DataMember]
-		public System.String ChangeList {get; set;}
+		public string ChangeList {get; set;}
 		[DataMember]
-		public System.String ClientVersion {get; set;}
+		public string ClientVersion {get; set;}
 		[DataMember]
-		public System.Boolean ClientVersionCheck {get; set;}
+		public bool ClientVersionCheck {get; set;}
 		[DataMember]
-		public System.String Deployed {get; set;}
+		public string Deployed {get; set;}
 		[DataMember]
-		public System.Boolean EntitlementsToDownload {get; set;}
+		public bool EntitlementsToDownload {get; set;}
 		[DataMember]
-		public System.Boolean ForcePermanentSession {get; set;}
+		public bool ForcePermanentSession {get; set;}
 		[DataMember]
-		public System.String JidPrepender {get; set;}
+		public string JidPrepender {get; set;}
 		[DataMember]
-		public System.String LauncherServiceUrl {get; set;}
+		public string LauncherServiceUrl {get; set;}
 		[DataMember]
-		public System.String NucleusNamespace {get; set;}
+		public string NucleusNamespace {get; set;}
 		[DataMember]
-		public System.String NucleusNamespaceWeb {get; set;}
+		public string NucleusNamespaceWeb {get; set;}
 		[DataMember]
-		public System.Int32 PersonaCacheTimeout {get; set;}
+		public int PersonaCacheTimeout {get; set;}
 		[DataMember]
-		public System.String PortalDomain {get; set;}
+		public string PortalDomain {get; set;}
 		[DataMember]
-		public System.String PortalSecureDomain {get; set;}
+		public string PortalSecureDomain {get; set;}
 		[DataMember]
-		public System.String PortalStoreFailurePage {get; set;}
+		public string PortalStoreFailurePage {get; set;}
 		[DataMember]
-		public System.String PortalTimeOut {get; set;}
+		public string PortalTimeOut {get; set;}
 		[DataMember]
-		public System.String ShardName {get; set;}
+		public string ShardName {get; set;}
 		[DataMember]
 		public System.DateTime Time {get; set;}
 		[DataMember]
-		public System.String Version {get; set;}
+		public string Version {get; set;}
 	}
 }

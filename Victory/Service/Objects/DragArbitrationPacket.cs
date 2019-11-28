@@ -5,16 +5,16 @@ namespace Victory.Service.Objects
 	public class DragArbitrationPacket
 	{
 		[DataMember]
-		public System.Single FractionCompleted {get; set;}
+		public float FractionCompleted {get; set;}
 		[DataMember]
-		public System.UInt32 LongestJumpDurationInMilliseconds {get; set;}
+		public uint LongestJumpDurationInMilliseconds {get; set;}
 		[DataMember]
-		public System.Int32 NumberOfCollisions {get; set;}
+		public int NumberOfCollisions {get; set;}
 		[DataMember]
-		public System.Int32 PerfectStart {get; set;}
+		public int PerfectStart {get; set;}
 		[DataMember]
-		public System.UInt32 SumOfJumpsDurationInMilliseconds {get; set;}
+		public uint SumOfJumpsDurationInMilliseconds {get; set;}
 		[DataMember]
-		public System.Single TopSpeed {get; set;}
+		public float TopSpeed {get; set;}
 	}
 }

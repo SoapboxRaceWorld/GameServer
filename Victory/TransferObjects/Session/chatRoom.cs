@@ -5,10 +5,10 @@ namespace Victory.TransferObjects.Session
 	public class chatRoom
 	{
 		[DataMember]
-		public System.Int32 channelCount {get; set;}
+		public int channelCount {get; set;}
 		[DataMember]
-		public System.String longName {get; set;}
+		public string longName {get; set;}
 		[DataMember]
-		public System.String shortName {get; set;}
+		public string shortName {get; set;}
 	}
 }

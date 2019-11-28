@@ -5,6 +5,6 @@ namespace Victory.TransferObjects.DriverPersona
 	public class PersonaDeleted
 	{
 		[DataMember]
-		public System.Int64 personaId {get; set;}
+		public long personaId {get; set;}
 	}
 }
