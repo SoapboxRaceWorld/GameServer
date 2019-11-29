@@ -53,8 +53,9 @@ namespace SBRW.Core
                 o.Password.RequireUppercase = false;
                 o.Password.RequireNonAlphanumeric = false;
                 o.Password.RequiredLength = 6;
+                o.ClaimsIdentity.UserIdClaimType = AuthClaimIdentifiers.Id;
             });
-            builder = new IdentityBuilder(builder.UserType, typeof(IdentityRole), builder.Services);
+            builder = new IdentityBuilder(builder.UserType, builder.RoleType, builder.Services);
             builder.AddEntityFrameworkStores<GameDbContext>().AddDefaultTokenProviders();
         }
     }

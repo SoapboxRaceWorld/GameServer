@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mime;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Victory.DataLayer.Serialization;
 
@@ -17,7 +15,7 @@ namespace SBRW.GameServer.Controllers
     {
         [HttpGet("inventory")]
         [Produces(MediaTypeNames.Application.Xml)]
-        public IActionResult TestInventory()
+        public async Task<IActionResult> TestInventory()
         {
             return Ok(new InventoryTrans
             {

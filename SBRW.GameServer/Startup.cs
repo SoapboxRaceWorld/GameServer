@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using SBRW.Core;
 using SBRW.Core.Auth;
 using SBRW.GameServer.Middleware;
+using SBRW.GameServer.Services;
 
 namespace SBRW.GameServer
 {
@@ -88,6 +89,7 @@ namespace SBRW.GameServer
                 .AddXmlDataContractSerializerFormatters()
                 .AddXmlSerializerFormatters()
                 .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<Startup>());
+            services.AddSingleton<ISessionService, SessionService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

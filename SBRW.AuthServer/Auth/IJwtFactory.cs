@@ -10,6 +10,6 @@ namespace SBRW.AuthServer.Auth
     public interface IJwtFactory
     {
         Task<string> GenerateEncodedToken(string email, ClaimsIdentity identity);
-        ClaimsIdentity GenerateClaimsIdentity(string email, string id);
+        ClaimsIdentity GenerateClaimsIdentity(string email, int id);
     }
 }

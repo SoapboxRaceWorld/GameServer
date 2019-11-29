@@ -12,7 +12,7 @@ namespace SBRW.Data.Entities
     /// A User entity represents a registered account on a server.
     /// </summary>
     [Table("users")]
-    public class AppUser : IdentityUser
+    public class AppUser : IdentityUser<int>
     {
         /// <summary>
         /// The <see cref="AppPersona"/> entities associated with the user.

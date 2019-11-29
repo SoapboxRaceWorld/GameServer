@@ -47,11 +47,11 @@ namespace SBRW.AuthServer.Auth
             return encodedJwt;
         }
 
-        public ClaimsIdentity GenerateClaimsIdentity(string email, string id)
+        public ClaimsIdentity GenerateClaimsIdentity(string email, int id)
         {
             return new ClaimsIdentity(new GenericIdentity(email, "Token"), new[]
             {
-                new Claim(AuthClaimIdentifiers.Id, id),
+                new Claim(AuthClaimIdentifiers.Id, id.ToString()),
                 new Claim(AuthClaimIdentifiers.Rol, AuthClaims.PlayerAccess)
             });
         }

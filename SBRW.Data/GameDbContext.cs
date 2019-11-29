@@ -2,13 +2,14 @@
 // 
 // Created: 11/27/2019 @ 10:13 PM.
 
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SBRW.Data.Entities;
 
 namespace SBRW.Data
 {
-    public class GameDbContext : IdentityDbContext<AppUser>
+    public class GameDbContext : IdentityDbContext<AppUser, IdentityRole<int>, int>
     {
         public GameDbContext(DbContextOptions options) : base(options)
         {
