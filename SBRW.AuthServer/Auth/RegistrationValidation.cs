@@ -4,7 +4,7 @@
 
 using FluentValidation;
 
-namespace SBRW.GameServer.Auth
+namespace SBRW.AuthServer.Auth
 {
     public class RegistrationValidation : AbstractValidator<RegistrationModel>
     {

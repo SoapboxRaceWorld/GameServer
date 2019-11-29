@@ -1,41 +1,42 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using SBRW.Data;
+using Microsoft.IdentityModel.Tokens;
+using SBRW.AuthServer.Auth;
+using SBRW.Core;
+using SBRW.Core.Auth;
 
 namespace SBRW.AuthServer
 {
-    public class Startup
+    public class Startup : CoreStartupBase
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration) : base(configuration)
         {
-            Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            base.ConfigureServices(services);
+
+            services.AddSingleton<IJwtFactory, JwtFactory>();
             services.AddMvc().AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<Startup>());
             services.AddAutoMapper(typeof(Startup));
-            services.AddDbContext<GameDbContext>(options =>
+
+            // Configure JwtIssuerOptions
+            var jwtAppSettingOptions = Configuration.GetSection(nameof(JwtIssuerOptions));
+
+            services.Configure<JwtIssuerOptions>(options =>
             {
-                options.UseMySql(Configuration.GetConnectionString("MainDB"),
-                    b => b.MigrationsAssembly(typeof(GameDbContext).Assembly.FullName));
+                options.Issuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)];
+                options.Audience = jwtAppSettingOptions[nameof(JwtIssuerOptions.Audience)];
+                options.SigningCredentials = new SigningCredentials(
+                    SecurityKey,
+                    SecurityAlgorithms.HmacSha256);
             });
         }
 

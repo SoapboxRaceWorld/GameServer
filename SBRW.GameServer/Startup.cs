@@ -1,76 +1,37 @@
 using System;
-using System.Text;
-using AutoMapper;
+using System.Linq;
+using System.Threading.Tasks;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Primitives;
 using Microsoft.IdentityModel.Tokens;
+using SBRW.Core;
 using SBRW.Core.Auth;
-using SBRW.Data;
-using SBRW.Data.Entities;
 using SBRW.GameServer.Middleware;
 
 namespace SBRW.GameServer
 {
-    public class Startup
+    public class Startup : CoreStartupBase
     {
-        private SymmetricSecurityKey _securityKey;
-
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration) : base(configuration)
         {
-            Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public override void ConfigureServices(IServiceCollection services)
         {
-            _securityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetValue<string>("Encryption:Key")));
-            
-            services.AddControllers();
-            services.AddMvc()
-                .AddXmlDataContractSerializerFormatters()
-                .AddXmlSerializerFormatters()
-                .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<Startup>());
-            services.AddDbContext<GameDbContext>(options =>
-            {
-                options.UseMySql(Configuration.GetConnectionString("MainDB"),
-                    b => b.MigrationsAssembly(typeof(GameDbContext).Assembly.FullName));
-            });
+            base.ConfigureServices(services);
 
-            // add identity
-            var builder = services.AddIdentityCore<AppUser>(o =>
-            {
-                // configure identity options
-                o.Password.RequireDigit = false;
-                o.Password.RequireLowercase = false;
-                o.Password.RequireUppercase = false;
-                o.Password.RequireNonAlphanumeric = false;
-                o.Password.RequiredLength = 6;
-            });
-            builder = new IdentityBuilder(builder.UserType, typeof(IdentityRole), builder.Services);
-            builder.AddEntityFrameworkStores<GameDbContext>().AddDefaultTokenProviders();
+            // authorization
 
             // jwt wire up
             // Get options from app settings
             var jwtAppSettingOptions = Configuration.GetSection(nameof(JwtIssuerOptions));
-
-            // Configure JwtIssuerOptions
-            services.Configure<JwtIssuerOptions>(options =>
-            {
-                options.Issuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)];
-                options.Audience = jwtAppSettingOptions[nameof(JwtIssuerOptions.Audience)];
-                options.SigningCredentials = new SigningCredentials(
-                    _securityKey,
-                    SecurityAlgorithms.HmacSha256);
-            });
 
             var tokenValidationParameters = new TokenValidationParameters
             {
@@ -81,9 +42,9 @@ namespace SBRW.GameServer
                 ValidAudience = jwtAppSettingOptions[nameof(JwtIssuerOptions.Audience)],
 
                 ValidateIssuerSigningKey = true,
-                IssuerSigningKey = _securityKey,
+                IssuerSigningKey = SecurityKey,
 
-                RequireExpirationTime = false,
+                RequireExpirationTime = true,
                 ValidateLifetime = true,
                 ClockSkew = TimeSpan.Zero
             };
@@ -97,17 +58,36 @@ namespace SBRW.GameServer
                 configureOptions.ClaimsIssuer = jwtAppSettingOptions[nameof(JwtIssuerOptions.Issuer)];
                 configureOptions.TokenValidationParameters = tokenValidationParameters;
                 configureOptions.SaveToken = true;
+                configureOptions.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        if (context.Request.Headers.TryGetValue("securityToken", out StringValues sv)
+                            && sv.Any())
+                        {
+                            context.Token = sv[0];
+                        }
+
+                        return Task.CompletedTask;
+                    }
+                };
             });
 
-            // authorization
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("SoapServicePlayer",
                     policyBuilder =>
                     {
-                        policyBuilder.RequireClaim(AuthClaimIdentifiers.Role, AuthClaims.PlayerAccess);
+                        policyBuilder.RequireAuthenticatedUser();
+                        //policyBuilder.RequireClaim(AuthClaimIdentifiers.Rol, AuthClaims.PlayerAccess);
                     });
             });
+
+            services.AddControllers();
+            services.AddMvc()
+                .AddXmlDataContractSerializerFormatters()
+                .AddXmlSerializerFormatters()
+                .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<Startup>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -120,10 +100,11 @@ namespace SBRW.GameServer
 
             app.UseMiddleware<BlackboxMiddleware>();
 
-//            app.UseHttpsRedirection();
+            //            app.UseHttpsRedirection();
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });

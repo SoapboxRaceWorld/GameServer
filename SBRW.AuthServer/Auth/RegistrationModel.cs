@@ -2,7 +2,7 @@
 // 
 // Created: 11/28/2019 @ 11:51 AM.
 
-namespace SBRW.GameServer.Auth
+namespace SBRW.AuthServer.Auth
 {
     public class RegistrationModel
     {

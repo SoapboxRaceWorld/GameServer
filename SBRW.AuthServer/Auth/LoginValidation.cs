@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace SBRW.GameServer.Auth
+namespace SBRW.AuthServer.Auth
 {
     public class LoginValidation : AbstractValidator<LoginModel>
     {

@@ -6,6 +6,7 @@ namespace SBRW.Core.Auth
 {
     public class AuthClaimIdentifiers
     {
-        public const string Role = "Role";
+        public const string Rol = "rol";
+        public const string Id = "id";
     }
 }
