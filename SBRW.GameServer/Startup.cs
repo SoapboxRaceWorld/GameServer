@@ -89,7 +89,9 @@ namespace SBRW.GameServer
                 .AddXmlDataContractSerializerFormatters()
                 .AddXmlSerializerFormatters()
                 .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<Startup>());
+
             services.AddSingleton<ISessionService, SessionService>();
+            services.AddSingleton<ISettingsService, SettingsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
