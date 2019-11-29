@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:53664",
-      "sslPort": 44395
+      "applicationUrl": "http://localhost:11909",
+      "sslPort": 44316
     }
   },
   "profiles": {
@@ -17,14 +17,14 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SBRW.GameServer": {
+    "SBRW.AuthServer": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+      "applicationUrl": "https://localhost:6001;http://localhost:6000"
     }
   }
 }

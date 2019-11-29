@@ -2,10 +2,10 @@
 // 
 // Created: 11/28/2019 @ 12:39 PM.
 
-namespace SBRW.GameServer.Auth
+namespace SBRW.Core.Auth
 {
-    public class AuthClaimIdentifiers
+    public class AuthClaims
     {
-        public const string Role = "Role";
+        public const string PlayerAccess = "PlayerAccess";
     }
 }

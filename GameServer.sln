@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Victory", "Victory\Victory.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VictoryCodeGen", "VictoryCodeGen\VictoryCodeGen.csproj", "{97A93415-3F73-4DC0-B879-D5F6AB034B72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBRW.AuthServer", "SBRW.AuthServer\SBRW.AuthServer.csproj", "{81135E7E-2C5D-40E9-B6A6-52FB26639358}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBRW.Core", "SBRW.Core\SBRW.Core.csproj", "{B495D8FE-35D3-4C37-BE4F-16FEE0DBA88D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{97A93415-3F73-4DC0-B879-D5F6AB034B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97A93415-3F73-4DC0-B879-D5F6AB034B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97A93415-3F73-4DC0-B879-D5F6AB034B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81135E7E-2C5D-40E9-B6A6-52FB26639358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81135E7E-2C5D-40E9-B6A6-52FB26639358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81135E7E-2C5D-40E9-B6A6-52FB26639358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81135E7E-2C5D-40E9-B6A6-52FB26639358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B495D8FE-35D3-4C37-BE4F-16FEE0DBA88D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B495D8FE-35D3-4C37-BE4F-16FEE0DBA88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B495D8FE-35D3-4C37-BE4F-16FEE0DBA88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B495D8FE-35D3-4C37-BE4F-16FEE0DBA88D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

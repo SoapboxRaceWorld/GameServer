@@ -10,10 +10,10 @@ using Microsoft.AspNetCore.Mvc;
 using SBRW.Data.Entities;
 using SBRW.GameServer.Auth;
 
-namespace SBRW.GameServer.Controllers
+namespace SBRW.AuthServer.Controllers
 {
     [ApiController]
-    [Route("auth")]
+    [Route("api/auth")]
     [Produces(MediaTypeNames.Application.Json)]
     public class AuthenticationController : ControllerBase
     {
