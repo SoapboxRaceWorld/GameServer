@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using CoreLibraries.ModuleSystem;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -14,6 +15,7 @@ using SBRW.Core;
 using SBRW.Core.Auth;
 using SBRW.GameServer.Middleware;
 using SBRW.GameServer.Services;
+using SBRW.GameServer.Services.Attrib;
 
 namespace SBRW.GameServer
 {
@@ -92,10 +94,14 @@ namespace SBRW.GameServer
 
             services.AddSingleton<ISessionService, SessionService>();
             services.AddSingleton<ISettingsService, SettingsService>();
+            services.AddSingleton<GameplayVault>();
+            services.AddSingleton(new ModuleLoader());
+            services.AddSingleton<IAttribService, AttribService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ModuleLoader moduleLoader,
+            IAttribService attribService)
         {
             if (env.IsDevelopment())
             {
@@ -112,6 +118,9 @@ namespace SBRW.GameServer
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+
+            moduleLoader.Load();
+            attribService.LoadAttribData();
         }
     }
 }
