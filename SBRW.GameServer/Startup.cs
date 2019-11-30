@@ -92,11 +92,13 @@ namespace SBRW.GameServer
                 .AddXmlSerializerFormatters()
                 .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<Startup>());
 
+            services.AddSingleton(new ModuleLoader());
+
             services.AddSingleton<ISessionService, SessionService>();
             services.AddSingleton<ISettingsService, SettingsService>();
             services.AddSingleton<GameplayVault>();
-            services.AddSingleton(new ModuleLoader());
             services.AddSingleton<IAttribService, AttribService>();
+            services.AddSingleton<ICarClassesService, CarClassesService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
