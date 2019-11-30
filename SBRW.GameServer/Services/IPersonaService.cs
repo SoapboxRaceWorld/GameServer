@@ -2,6 +2,7 @@
 // 
 // Created: 11/30/2019 @ 4:38 PM.
 
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using SBRW.Data.Entities;
 using Victory.Service.Objects;
@@ -13,5 +14,7 @@ namespace SBRW.GameServer.Services
         Task<AppPersona> FindPersonaById(int personaId);
 
         ProfileData GetPersonaInfo(AppPersona persona);
+
+        Task<List<PersonaBase>> GetPersonaBaseFromList(List<long> personaIds);
     }
 }

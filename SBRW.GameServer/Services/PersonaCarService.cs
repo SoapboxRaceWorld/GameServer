@@ -46,6 +46,20 @@ namespace SBRW.GameServer.Services
             return carSlotInfoTrans;
         }
 
+        public async Task<OwnedCarTrans> GetDefaultCar(int personaId)
+        {
+            AppPersona persona = await _context.Personas.Include(p => p.OwnedCars)
+                .ThenInclude(o => o.CustomCar)
+                .FirstOrDefaultAsync(p => p.ID == personaId);
+
+            if (persona == null)
+            {
+                throw new ArgumentException($"Cannot find persona ID {personaId}");
+            }
+
+            return ConvertOwnedCarToContract(persona.OwnedCars[persona.SelectedCarIndex]);
+        }
+
         private OwnedCarTrans ConvertOwnedCarToContract(AppOwnedCar personaOwnedCar)
         {
             OwnedCarTrans ownedCarTrans = new OwnedCarTrans();

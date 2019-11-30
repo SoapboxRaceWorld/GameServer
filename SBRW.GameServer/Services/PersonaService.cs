@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using SBRW.Data;
 using SBRW.Data.Entities;
@@ -48,5 +49,31 @@ namespace SBRW.GameServer.Services
                 Name = persona.Name
             };
         }
+
+        public async Task<List<PersonaBase>> GetPersonaBaseFromList(List<long> personaIds)
+        {
+            List<PersonaBase> personas = new List<PersonaBase>();
+
+            foreach (var personaId in personaIds.Select(Convert.ToInt32))
+            {
+                AppPersona persona = await FindPersonaById(personaId);
+                personas.Add(ConvertPersonaEntityToPersonaBase(persona));
+            }
+
+            return personas;
+        }
+
+        private PersonaBase ConvertPersonaEntityToPersonaBase(AppPersona persona) => new PersonaBase
+        {
+            Motto = persona.Motto,
+            Badges = new List<BadgePacket>(),
+            IconIndex = persona.IconIndex,
+            Level = persona.Level,
+            PersonaId = persona.ID,
+            Presence = 1,
+            Name = persona.Name,
+            Score = persona.Score,
+            UserId = persona.User.Id
+        };
     }
 }

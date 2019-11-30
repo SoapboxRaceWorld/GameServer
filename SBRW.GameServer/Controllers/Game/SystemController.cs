@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Victory.DataLayer.Serialization;
 using Victory.DataLayer.Serialization.LoginAnnouncement;
 using Victory.Service;
+using Victory.TransferObjects.News;
 
 namespace SBRW.GameServer.Controllers.Game
 {
@@ -78,6 +79,38 @@ namespace SBRW.GameServer.Controllers.Game
             {
                 Announcements = new List<LoginAnnouncementDefinition>(),
                 ImagesPath = "https://share.sbrw.io/img"
+            });
+        }
+
+        [HttpGet("NewsArticles")]
+        public async Task<List<NewsArticleTrans>> GetNewsArticles()
+        {
+            return await Task.FromResult(new List<NewsArticleTrans>
+            {
+                new NewsArticleTrans
+                {
+                    ExpiryTime = DateTime.Now.AddHours(1),
+                    Filters = (int) NewsArticleFilters.NEWSFILTERMASK_All,
+                    Type = (int) NewsArticleType.UnopenedGift,
+                    PersonaId = 100L,
+                    IconType = 4,
+                    Parameters = "STORE_VANITY_NEON",
+                    LongText_HALId = "TXT_NEWS_UNOPENEDGIFT_3",
+                    ShortText_HALId = "TXT_NEWS_UNOPENEDGIFT_SHORT",
+                    Sticky = 1,
+                    Timestamp = DateTime.Now.Subtract(TimeSpan.FromMinutes(10)).Ticks,
+                    NewsId = 14002
+                }
+            });
+        }
+
+        [HttpGet("heartbeat")]
+        public async Task<HeartBeat> Heartbeat()
+        {
+            return await Task.FromResult(new HeartBeat
+            {
+                enabledBitField = 0, 
+                MetagameFlags = 2
             });
         }
     }

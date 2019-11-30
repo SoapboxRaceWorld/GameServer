@@ -10,5 +10,6 @@ namespace SBRW.GameServer.Services
     public interface IPersonaCarService
     {
         Task<CarSlotInfoTrans> GetCarSlots(int personaId);
+        Task<OwnedCarTrans> GetDefaultCar(int personaId);
     }
 }

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SBRW.GameServer.Services;
 using Victory.Service.Objects;
+using Victory.TransferObjects.DriverPersona;
 
 namespace SBRW.GameServer.Controllers.Game
 {
@@ -38,6 +39,18 @@ namespace SBRW.GameServer.Controllers.Game
         public async Task<ProfileData> GetPersonaInfo([FromQuery] int personaId)
         {
             return _personaService.GetPersonaInfo(await _personaService.FindPersonaById(personaId));
+        }
+
+        [HttpPost("GetPersonaBaseFromList")]
+        public async Task<List<PersonaBase>> GetPersonaBaseFromList([FromBody] PersonaIdArray personaIdArray)
+        {
+            return await _personaService.GetPersonaBaseFromList(personaIdArray.PersonaIds);
+        }
+
+        [HttpPost("UpdatePersonaPresence")]
+        public async Task<IActionResult> UpdatePersonaPresence([FromQuery] int presence)
+        {
+            return Ok();
         }
     }
 }

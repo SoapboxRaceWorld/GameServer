@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Net.Mime;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SBRW.GameServer.Services;
+using System.Collections.Generic;
+using System.Net.Mime;
+using System.Threading.Tasks;
 using Victory.DataLayer.Serialization;
 
 namespace SBRW.GameServer.Controllers.Game
@@ -22,10 +22,16 @@ namespace SBRW.GameServer.Controllers.Game
             _personaCarService = personaCarService;
         }
 
-        [HttpGet("{personaId:int}/{language}")]
-        public async Task<CarSlotInfoTrans> GetPersonaCarSlots(int personaId, string language)
+        [HttpGet("{personaId:int}/carslots")]
+        public async Task<CarSlotInfoTrans> GetPersonaCarSlots(int personaId, [FromQuery] string language)
         {
             return await _personaCarService.GetCarSlots(personaId);
+        }
+
+        [HttpGet("{personaId:int}/defaultcar")]
+        public async Task<OwnedCarTrans> GetPersonaDefaultCar(int personaId)
+        {
+            return await _personaCarService.GetDefaultCar(personaId);
         }
 
         [HttpGet("inventory/objects")]
