@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using SBRW.Data.Entities;
 using SBRW.GameServer.Services;
 using Victory.DataLayer.Serialization;
+using Victory.DataLayer.Serialization.Social;
 
 namespace SBRW.GameServer.Controllers.Game
 {
@@ -35,6 +36,21 @@ namespace SBRW.GameServer.Controllers.Game
             AppUser user = await _manager.GetUserAsync(User);
 
             return await Task.FromResult(_settingsService.FetchClientSettings(user));
+        }
+
+        [HttpGet("getsocialsettings")]
+        public async Task<SocialSettings> GetSocialSettings()
+        {
+            return await Task.FromResult(new SocialSettings
+            {
+                AppearOffline = true,
+                DeclinePrivateInvite = 1,
+                DeclineGroupInvite = 1,
+                DeclineIncommingFriendRequests = true,
+                HideOfflineFriends = true,
+                ShowNewsOnSignIn = false,
+                ShowOnlyPlayersInSameChatChannel = true
+            });
         }
     }
 }

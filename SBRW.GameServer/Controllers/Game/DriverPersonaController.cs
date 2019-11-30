@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SBRW.GameServer.Services;
+using Victory.Service.Objects;
 
 namespace SBRW.GameServer.Controllers.Game
 {
@@ -16,6 +18,13 @@ namespace SBRW.GameServer.Controllers.Game
     [Authorize(Policy = "SoapServicePlayer")]
     public class DriverPersonaController : ControllerBase
     {
+        private readonly IPersonaService _personaService;
+
+        public DriverPersonaController(IPersonaService personaService)
+        {
+            _personaService = personaService;
+        }
+
         [HttpGet("GetExpLevelPointsMap")]
         public async Task<List<int>> GetExpLevelPointsMap()
         {
@@ -23,6 +32,12 @@ namespace SBRW.GameServer.Controllers.Game
             {
                 100, 975, 2025
             });
+        }
+
+        [HttpGet("GetPersonaInfo")]
+        public async Task<ProfileData> GetPersonaInfo([FromQuery] int personaId)
+        {
+            return _personaService.GetPersonaInfo(await _personaService.FindPersonaById(personaId));
         }
     }
 }

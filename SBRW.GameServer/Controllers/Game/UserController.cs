@@ -44,5 +44,18 @@ namespace SBRW.GameServer.Controllers.Game
 
             return await _sessionService.GetPermanentSession(user, token);
         }
+
+        /// <summary>
+        /// Updates the user's session so all operations are performed on the persona with the given ID.
+        /// </summary>
+        /// <param name="personaId"></param>
+        /// <returns></returns>
+        [HttpPost("SecureLoginPersona")]
+        public async Task<IActionResult> SecureLoginPersona([FromQuery] int personaId)
+        {
+            AppUser user = await _manager.GetUserAsync(User);
+            await _sessionService.SecureLoginPersona(user, personaId);
+            return Ok();
+        }
     }
 }

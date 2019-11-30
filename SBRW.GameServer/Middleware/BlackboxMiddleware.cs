@@ -6,6 +6,7 @@ using System.IO.Compression;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
+using Microsoft.Extensions.Logging;
 
 namespace SBRW.GameServer.Middleware
 {
@@ -15,11 +16,14 @@ namespace SBRW.GameServer.Middleware
     /// </summary>
     public class BlackboxMiddleware
     {
+        private readonly ILogger<BlackboxMiddleware> _logger;
+
         private readonly RequestDelegate _next;
 
-        public BlackboxMiddleware(RequestDelegate next)
+        public BlackboxMiddleware(RequestDelegate next, ILogger<BlackboxMiddleware> logger)
         {
             _next = next;
+            _logger = logger;
         }
 
         /// <summary>
@@ -29,11 +33,6 @@ namespace SBRW.GameServer.Middleware
         /// <returns></returns>
         public async Task Invoke(HttpContext context)
         {
-            foreach (var header in context.Request.Headers)
-            {
-                Console.WriteLine($"{header.Key} - {string.Join<IEnumerable>(", ", header.Value)}");
-            }
-            
             // Disables chunked encoding. The game doesn't like that.
             context.Features.Get<IHttpResponseBodyFeature>()?.DisableBuffering();
             
@@ -57,21 +56,28 @@ namespace SBRW.GameServer.Middleware
             await using var newBody = new MemoryStream();
             context.Response.Body = newBody;
 
-            await _next(context);
-
-            context.Response.Body = existingBody;
-
-            newBody.Seek(0, SeekOrigin.Begin);
-
-            var compressedBody = new MemoryStream();
-
-            await using (var compressedStream = new GZipStream(compressedBody, CompressionLevel.Fastest, true))
+            try
             {
-                await newBody.CopyToAsync(compressedStream);
-            }
+                await _next(context);
 
-            context.Response.ContentLength = compressedBody.Length;
-            await context.Response.Body.WriteAsync(compressedBody.ToArray());
+                context.Response.Body = existingBody;
+
+                newBody.Seek(0, SeekOrigin.Begin);
+
+                var compressedBody = new MemoryStream();
+
+                await using (var compressedStream = new GZipStream(compressedBody, CompressionLevel.Fastest, true))
+                {
+                    await newBody.CopyToAsync(compressedStream);
+                }
+
+                context.Response.ContentLength = compressedBody.Length;
+                await context.Response.Body.WriteAsync(compressedBody.ToArray());
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "An error occurred while processing a request");
+            }
         }
     }
 }

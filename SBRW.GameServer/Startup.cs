@@ -91,6 +91,12 @@ namespace SBRW.GameServer
                 .AddXmlDataContractSerializerFormatters()
                 .AddXmlSerializerFormatters()
                 .AddFluentValidation(c => c.RegisterValidatorsFromAssemblyContaining<Startup>());
+            services.AddSession();
+            services.AddDistributedRedisCache(options =>
+            {
+                options.Configuration = Configuration.GetConnectionString("RedisDB");
+                options.InstanceName = "master";
+            });
 
             services.AddSingleton(new ModuleLoader());
 
@@ -100,6 +106,7 @@ namespace SBRW.GameServer
             services.AddSingleton<IAttribService, AttribService>();
             services.AddSingleton<ICarClassesService, CarClassesService>();
             services.AddScoped<IPersonaCarService, PersonaCarService>();
+            services.AddScoped<IPersonaService, PersonaService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -115,6 +122,7 @@ namespace SBRW.GameServer
 
             //            app.UseHttpsRedirection();
 
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthentication();
