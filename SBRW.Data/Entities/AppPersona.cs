@@ -2,6 +2,7 @@
 // 
 // Created: 11/28/2019 @ 11:28 AM.
 
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -72,5 +73,9 @@ namespace SBRW.Data.Entities
         /// The user that the persona is associated with.
         /// </summary>
         public AppUser User { get; set; }
+
+        public List<AppOwnedCar> OwnedCars { get; set; }
+
+        public int SelectedCarIndex { get; set; }
     }
 }

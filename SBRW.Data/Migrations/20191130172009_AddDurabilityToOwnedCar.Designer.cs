@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SBRW.Data;
 
 namespace SBRW.Data.Migrations
 {
     [DbContext(typeof(GameDbContext))]
-    partial class GameDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191130172009_AddDurabilityToOwnedCar")]
+    partial class AddDurabilityToOwnedCar
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -185,7 +187,7 @@ namespace SBRW.Data.Migrations
                     b.Property<int>("Durability")
                         .HasColumnType("int");
 
-                    b.Property<DateTimeOffset?>("ExpirationDate")
+                    b.Property<DateTimeOffset>("ExpirationDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<float>("Heat")

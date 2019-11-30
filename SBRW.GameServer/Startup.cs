@@ -94,11 +94,12 @@ namespace SBRW.GameServer
 
             services.AddSingleton(new ModuleLoader());
 
-            services.AddSingleton<ISessionService, SessionService>();
+            services.AddScoped<ISessionService, SessionService>();
             services.AddSingleton<ISettingsService, SettingsService>();
             services.AddSingleton<GameplayVault>();
             services.AddSingleton<IAttribService, AttribService>();
             services.AddSingleton<ICarClassesService, CarClassesService>();
+            services.AddScoped<IPersonaCarService, PersonaCarService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

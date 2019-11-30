@@ -15,19 +15,6 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="EFModel1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EFModel1.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="EFModel1.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>EFModel1.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
 </Project>
