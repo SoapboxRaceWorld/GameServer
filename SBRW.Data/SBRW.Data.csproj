@@ -15,11 +15,6 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Extensions.Identity.Stores">
-      <HintPath>C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\3.0.0\ref\netcoreapp3.0\Microsoft.Extensions.Identity.Stores.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <None Update="EFModel1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EFModel1.cs</LastGenOutput>

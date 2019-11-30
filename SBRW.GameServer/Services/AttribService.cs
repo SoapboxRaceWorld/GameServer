@@ -8,7 +8,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using CoreLibraries.ModuleSystem;
 using Microsoft.Extensions.Logging;
 using SBRW.GameServer.Services.Attrib;
 using VaultLib.Core.Data;
@@ -23,17 +22,14 @@ namespace SBRW.GameServer.Services
         private readonly ILogger<AttribService> _logger;
 
         private readonly GameplayVault _gameplayVault;
-        private readonly ModuleLoader _moduleLoader;
 
         private Database _database;
 
         public AttribService(ILogger<AttribService> logger,
-            GameplayVault gameplayVault,
-            ModuleLoader moduleLoader)
+            GameplayVault gameplayVault)
         {
             _logger = logger;
             _gameplayVault = gameplayVault;
-            _moduleLoader = moduleLoader;
 
             HashManager.LoadDictionary(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"data\hashes.txt"));
         }
@@ -48,11 +44,6 @@ namespace SBRW.GameServer.Services
             LoadGameplayFiles();
 
             _database.CompleteLoad();
-
-            foreach (var carClassCollection in FindCollections("gameplay/baseelement/serveritems/car_class/.*"))
-            {
-                _logger.LogDebug("CarClass {name} ({fullPath})", carClassCollection.Name, carClassCollection.FullPath);
-            }
         }
 
         public IEnumerable<VLTCollection> FindCollections(string regexPattern)
