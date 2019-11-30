@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Victory.DataLayer.Serialization;
+using Victory.DataLayer.Serialization.LoginAnnouncement;
 using Victory.Service;
 
 namespace SBRW.GameServer.Controllers.Game
@@ -41,6 +43,41 @@ namespace SBRW.GameServer.Controllers.Game
                 ShardName = "SBRW",
                 Time = DateTime.Now,
                 Version = "4201"
+            });
+        }
+
+        [HttpGet("getrebroadcasters")]
+        public async Task<List<UdpRelayInfo>> GetReBroadcasters()
+        {
+            return await Task.FromResult(new List<UdpRelayInfo>
+            {
+                new UdpRelayInfo {Host = "127.0.0.1", Port = 9999},
+                new UdpRelayInfo {Host = "127.0.0.2", Port = 9899},
+            });
+        }
+
+        [HttpGet("getregioninfo")]
+        public async Task<RegionInfo> GetRegionInfo()
+        {
+            return await Task.FromResult(new RegionInfo
+            {
+                CountdownProposalInMilliseconds = 3000,
+                DirectConnectTimeoutInMilliseconds = 1000,
+                DropOutTimeInMilliseconds = 15000,
+                EventLoadTimeoutInMilliseconds = 30000,
+                HeartbeatIntervalInMilliseconds = 1000,
+                UdpRelayBandwidthInBps = 9600,
+                UdpRelayTimeoutInMilliseconds = 60000
+            });
+        }
+
+        [HttpGet("LoginAnnouncements")]
+        public async Task<LoginAnnouncementsDefinition> GetLoginAnnouncements([FromQuery] string language)
+        {
+            return await Task.FromResult(new LoginAnnouncementsDefinition
+            {
+                Announcements = new List<LoginAnnouncementDefinition>(),
+                ImagesPath = "https://share.sbrw.io/img"
             });
         }
     }

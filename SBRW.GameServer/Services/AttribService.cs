@@ -2,14 +2,13 @@
 // 
 // Created: 11/29/2019 @ 3:08 PM.
 
+using Microsoft.Extensions.Logging;
+using SBRW.GameServer.Services.Attrib;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Microsoft.Extensions.Logging;
-using SBRW.GameServer.Services.Attrib;
 using VaultLib.Core.Data;
 using VaultLib.Core.DB;
 using VaultLib.Core.Hashing;
@@ -44,6 +43,8 @@ namespace SBRW.GameServer.Services
             LoadGameplayFiles();
 
             _database.CompleteLoad();
+
+
         }
 
         public IEnumerable<VLTCollection> FindCollections(string regexPattern)
