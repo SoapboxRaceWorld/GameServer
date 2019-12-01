@@ -2,12 +2,10 @@
 // 
 // Created: 11/30/2019 @ 12:02 PM.
 
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using SBRW.Data;
 using SBRW.Data.Entities;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Victory.DataLayer.Serialization;
 
 namespace SBRW.GameServer.Services
@@ -16,21 +14,21 @@ namespace SBRW.GameServer.Services
     {
         private readonly GameDbContext _context;
 
-        public PersonaCarService(GameDbContext context)
+        private readonly IPersonaService _personaService;
+
+        public PersonaCarService(GameDbContext context, IPersonaService personaService)
         {
             _context = context;
+            _personaService = personaService;
         }
 
         public async Task<CarSlotInfoTrans> GetCarSlots(int personaId)
         {
-            AppPersona persona = await _context.Personas.Include(p => p.OwnedCars)
-                .ThenInclude(o => o.CustomCar)
-                .FirstOrDefaultAsync(p => p.ID == personaId);
+            AppPersona persona = await _personaService.FindPersonaById(personaId);
 
-            if (persona == null)
-            {
-                throw new ArgumentException($"Cannot find persona ID {personaId}");
-            }
+            await _context.Entry(persona)
+                .Collection(p => p.OwnedCars)
+                .LoadAsync();
 
             CarSlotInfoTrans carSlotInfoTrans = new CarSlotInfoTrans();
             carSlotInfoTrans.OwnedCarSlotsCount = persona.OwnedCars.Count;
@@ -48,14 +46,11 @@ namespace SBRW.GameServer.Services
 
         public async Task<OwnedCarTrans> GetDefaultCar(int personaId)
         {
-            AppPersona persona = await _context.Personas.Include(p => p.OwnedCars)
-                .ThenInclude(o => o.CustomCar)
-                .FirstOrDefaultAsync(p => p.ID == personaId);
+            AppPersona persona = await _personaService.FindPersonaById(personaId);
 
-            if (persona == null)
-            {
-                throw new ArgumentException($"Cannot find persona ID {personaId}");
-            }
+            await _context.Entry(persona)
+                .Collection(p => p.OwnedCars)
+                .LoadAsync();
 
             return ConvertOwnedCarToContract(persona.OwnedCars[persona.SelectedCarIndex]);
         }
@@ -77,7 +72,7 @@ namespace SBRW.GameServer.Services
             cct.Id = personaOwnedCar.CustomCar.ID;
             cct.BaseCar = personaOwnedCar.CustomCar.BaseCarHash;
             cct.PhysicsProfileHash = personaOwnedCar.CustomCar.PhysicsProfileHash;
-            cct.CarClassHash = unchecked((int) 0xE7CF6958);
+            cct.CarClassHash = unchecked((int)0xE7CF6958);
             cct.Paints = new List<CustomPaintTrans>();
             cct.VisualParts = new List<VisualPartTrans>();
             cct.Rating = 420;

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using SBRW.Data;
 using SBRW.Data.Entities;
 using Victory.Service.Objects;
@@ -23,7 +24,8 @@ namespace SBRW.GameServer.Services
 
         public async Task<AppPersona> FindPersonaById(int personaId)
         {
-            AppPersona persona = await _dbContext.Personas.FindAsync(personaId);
+            AppPersona persona = await _dbContext.Personas.Include(p => p.User)
+                .FirstOrDefaultAsync(p => p.ID == personaId);
 
             if (persona == null)
             {
@@ -44,7 +46,7 @@ namespace SBRW.GameServer.Services
                 PersonaId = persona.ID,
                 Level = persona.Level,
                 Rep = persona.Reputation,
-                RepAtCurrentLevel = (int) persona.ReputationAtLevel,
+                RepAtCurrentLevel = (int)persona.ReputationAtLevel,
                 Score = persona.Score,
                 Name = persona.Name
             };
